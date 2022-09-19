@@ -13,18 +13,11 @@
 		2658A3A928D8CD1A00366538 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2658A3A728D8CD1A00366538 /* Main.storyboard */; };
 		2658A3AB28D8CD1C00366538 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2658A3AA28D8CD1C00366538 /* Assets.xcassets */; };
 		2658A3AE28D8CD1C00366538 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2658A3AC28D8CD1C00366538 /* LaunchScreen.storyboard */; };
-		2658A3B928D8CD1C00366538 /* CurrencyApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A3B828D8CD1C00366538 /* CurrencyApplicationTests.swift */; };
+		2658A3D928D8CF8600366538 /* CurrencyApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A3D828D8CF8600366538 /* CurrencyApplicationTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2658A3B528D8CD1C00366538 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2658A39628D8CD1A00366538 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2658A39D28D8CD1A00366538;
-			remoteInfo = CurrencyApplication;
-		};
-		2658A3C028D8CD1C00366538 /* PBXContainerItemProxy */ = {
+		2658A3DB28D8CF8600366538 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2658A39628D8CD1A00366538 /* Project object */;
 			proxyType = 1;
@@ -42,10 +35,9 @@
 		2658A3AA28D8CD1C00366538 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2658A3AD28D8CD1C00366538 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2658A3AF28D8CD1C00366538 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2658A3B428D8CD1C00366538 /* CurrencyApplicationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurrencyApplicationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2658A3B828D8CD1C00366538 /* CurrencyApplicationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyApplicationTests.swift; sourceTree = "<group>"; };
-		2658A3BA28D8CD1C00366538 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2658A3BF28D8CD1C00366538 /* CurrencyApplicationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurrencyApplicationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2658A3D628D8CF8600366538 /* CurrencyApplicationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurrencyApplicationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2658A3D828D8CF8600366538 /* CurrencyApplicationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyApplicationTests.swift; sourceTree = "<group>"; };
+		2658A3DA28D8CF8600366538 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,14 +48,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2658A3B128D8CD1C00366538 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2658A3BC28D8CD1C00366538 /* Frameworks */ = {
+		2658A3D328D8CF8600366538 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -77,7 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				2658A3A028D8CD1A00366538 /* CurrencyApplication */,
-				2658A3B728D8CD1C00366538 /* CurrencyApplicationTests */,
+				2658A3D728D8CF8600366538 /* CurrencyApplicationTests */,
 				2658A39F28D8CD1A00366538 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,8 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				2658A39E28D8CD1A00366538 /* CurrencyApplication.app */,
-				2658A3B428D8CD1C00366538 /* CurrencyApplicationTests.xctest */,
-				2658A3BF28D8CD1C00366538 /* CurrencyApplicationUITests.xctest */,
+				2658A3D628D8CF8600366538 /* CurrencyApplicationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,11 +90,11 @@
 			path = CurrencyApplication;
 			sourceTree = "<group>";
 		};
-		2658A3B728D8CD1C00366538 /* CurrencyApplicationTests */ = {
+		2658A3D728D8CF8600366538 /* CurrencyApplicationTests */ = {
 			isa = PBXGroup;
 			children = (
-				2658A3B828D8CD1C00366538 /* CurrencyApplicationTests.swift */,
-				2658A3BA28D8CD1C00366538 /* Info.plist */,
+				2658A3D828D8CF8600366538 /* CurrencyApplicationTests.swift */,
+				2658A3DA28D8CF8600366538 /* Info.plist */,
 			);
 			path = CurrencyApplicationTests;
 			sourceTree = "<group>";
@@ -135,41 +119,23 @@
 			productReference = 2658A39E28D8CD1A00366538 /* CurrencyApplication.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2658A3B328D8CD1C00366538 /* CurrencyApplicationTests */ = {
+		2658A3D528D8CF8600366538 /* CurrencyApplicationTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2658A3CB28D8CD1C00366538 /* Build configuration list for PBXNativeTarget "CurrencyApplicationTests" */;
+			buildConfigurationList = 2658A3DD28D8CF8600366538 /* Build configuration list for PBXNativeTarget "CurrencyApplicationTests" */;
 			buildPhases = (
-				2658A3B028D8CD1C00366538 /* Sources */,
-				2658A3B128D8CD1C00366538 /* Frameworks */,
-				2658A3B228D8CD1C00366538 /* Resources */,
+				2658A3D228D8CF8600366538 /* Sources */,
+				2658A3D328D8CF8600366538 /* Frameworks */,
+				2658A3D428D8CF8600366538 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2658A3B628D8CD1C00366538 /* PBXTargetDependency */,
+				2658A3DC28D8CF8600366538 /* PBXTargetDependency */,
 			);
 			name = CurrencyApplicationTests;
 			productName = CurrencyApplicationTests;
-			productReference = 2658A3B428D8CD1C00366538 /* CurrencyApplicationTests.xctest */;
+			productReference = 2658A3D628D8CF8600366538 /* CurrencyApplicationTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		2658A3BE28D8CD1C00366538 /* CurrencyApplicationUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2658A3CE28D8CD1C00366538 /* Build configuration list for PBXNativeTarget "CurrencyApplicationUITests" */;
-			buildPhases = (
-				2658A3BB28D8CD1C00366538 /* Sources */,
-				2658A3BC28D8CD1C00366538 /* Frameworks */,
-				2658A3BD28D8CD1C00366538 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2658A3C128D8CD1C00366538 /* PBXTargetDependency */,
-			);
-			name = CurrencyApplicationUITests;
-			productName = CurrencyApplicationUITests;
-			productReference = 2658A3BF28D8CD1C00366538 /* CurrencyApplicationUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -184,11 +150,7 @@
 					2658A39D28D8CD1A00366538 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
-					2658A3B328D8CD1C00366538 = {
-						CreatedOnToolsVersion = 11.3.1;
-						TestTargetID = 2658A39D28D8CD1A00366538;
-					};
-					2658A3BE28D8CD1C00366538 = {
+					2658A3D528D8CF8600366538 = {
 						CreatedOnToolsVersion = 11.3.1;
 						TestTargetID = 2658A39D28D8CD1A00366538;
 					};
@@ -208,8 +170,7 @@
 			projectRoot = "";
 			targets = (
 				2658A39D28D8CD1A00366538 /* CurrencyApplication */,
-				2658A3B328D8CD1C00366538 /* CurrencyApplicationTests */,
-				2658A3BE28D8CD1C00366538 /* CurrencyApplicationUITests */,
+				2658A3D528D8CF8600366538 /* CurrencyApplicationTests */,
 			);
 		};
 /* End PBXProject section */
@@ -225,14 +186,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2658A3B228D8CD1C00366538 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2658A3BD28D8CD1C00366538 /* Resources */ = {
+		2658A3D428D8CF8600366538 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -252,33 +206,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2658A3B028D8CD1C00366538 /* Sources */ = {
+		2658A3D228D8CF8600366538 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2658A3B928D8CD1C00366538 /* CurrencyApplicationTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2658A3BB28D8CD1C00366538 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				2658A3D928D8CF8600366538 /* CurrencyApplicationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2658A3B628D8CD1C00366538 /* PBXTargetDependency */ = {
+		2658A3DC28D8CF8600366538 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2658A39D28D8CD1A00366538 /* CurrencyApplication */;
-			targetProxy = 2658A3B528D8CD1C00366538 /* PBXContainerItemProxy */;
-		};
-		2658A3C128D8CD1C00366538 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2658A39D28D8CD1A00366538 /* CurrencyApplication */;
-			targetProxy = 2658A3C028D8CD1C00366538 /* PBXContainerItemProxy */;
+			targetProxy = 2658A3DB28D8CF8600366538 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -452,15 +394,13 @@
 			};
 			name = Release;
 		};
-		2658A3CC28D8CD1C00366538 /* Debug */ = {
+		2658A3DE28D8CF8600366538 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5XF22H3TY5;
 				INFOPLIST_FILE = CurrencyApplicationTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -474,15 +414,13 @@
 			};
 			name = Debug;
 		};
-		2658A3CD28D8CD1C00366538 /* Release */ = {
+		2658A3DF28D8CF8600366538 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5XF22H3TY5;
 				INFOPLIST_FILE = CurrencyApplicationTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -493,46 +431,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CurrencyApplication.app/CurrencyApplication";
-			};
-			name = Release;
-		};
-		2658A3CF28D8CD1C00366538 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5XF22H3TY5;
-				INFOPLIST_FILE = CurrencyApplicationUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.currency.CurrencyApplicationUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CurrencyApplication;
-			};
-			name = Debug;
-		};
-		2658A3D028D8CD1C00366538 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5XF22H3TY5;
-				INFOPLIST_FILE = CurrencyApplicationUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.currency.CurrencyApplicationUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CurrencyApplication;
 			};
 			name = Release;
 		};
@@ -557,20 +455,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2658A3CB28D8CD1C00366538 /* Build configuration list for PBXNativeTarget "CurrencyApplicationTests" */ = {
+		2658A3DD28D8CF8600366538 /* Build configuration list for PBXNativeTarget "CurrencyApplicationTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2658A3CC28D8CD1C00366538 /* Debug */,
-				2658A3CD28D8CD1C00366538 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2658A3CE28D8CD1C00366538 /* Build configuration list for PBXNativeTarget "CurrencyApplicationUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2658A3CF28D8CD1C00366538 /* Debug */,
-				2658A3D028D8CD1C00366538 /* Release */,
+				2658A3DE28D8CF8600366538 /* Debug */,
+				2658A3DF28D8CF8600366538 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
