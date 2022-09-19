@@ -76,7 +76,6 @@
 				770B336AD0F4399FCFEF4907 /* Pods-CurrencyApplicationTests.debug.xcconfig */,
 				EA4510ED6685A57FB5356A35 /* Pods-CurrencyApplicationTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -103,12 +102,13 @@
 		2658A3A028D8CD1A00366538 /* CurrencyApplication */ = {
 			isa = PBXGroup;
 			children = (
-				2658A3A128D8CD1A00366538 /* AppDelegate.swift */,
+				2658A3E828D8EBB800366538 /* Common */,
+				2658A3E728D8EBB800366538 /* Config */,
+				2658A3E928D8EBB800366538 /* Extension */,
+				2658A3E628D8EBB800366538 /* Network */,
+				2658A3E528D8EBB800366538 /* Resources */,
 				2658A3A328D8CD1A00366538 /* SceneDelegate.swift */,
 				2658A3A528D8CD1A00366538 /* ViewController.swift */,
-				2658A3A728D8CD1A00366538 /* Main.storyboard */,
-				2658A3AA28D8CD1C00366538 /* Assets.xcassets */,
-				2658A3AC28D8CD1C00366538 /* LaunchScreen.storyboard */,
 				2658A3AF28D8CD1C00366538 /* Info.plist */,
 			);
 			path = CurrencyApplication;
@@ -121,6 +121,45 @@
 				2658A3DA28D8CF8600366538 /* Info.plist */,
 			);
 			path = CurrencyApplicationTests;
+			sourceTree = "<group>";
+		};
+		2658A3E528D8EBB800366538 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2658A3A728D8CD1A00366538 /* Main.storyboard */,
+				2658A3AA28D8CD1C00366538 /* Assets.xcassets */,
+				2658A3AC28D8CD1C00366538 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2658A3E628D8EBB800366538 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		2658A3E728D8EBB800366538 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				2658A3A128D8CD1A00366538 /* AppDelegate.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		2658A3E828D8EBB800366538 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		2658A3E928D8EBB800366538 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		B85416B8096DA5141B180560 /* Frameworks */ = {
