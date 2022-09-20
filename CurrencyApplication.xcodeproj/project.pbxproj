@@ -46,6 +46,10 @@
 		2658A58E28D9CCD700366538 /* RateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A58D28D9CCD700366538 /* RateModel.swift */; };
 		2658A59028D9CD3800366538 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A58F28D9CD3700366538 /* Router.swift */; };
 		2658A59228D9D02A00366538 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A59128D9D02A00366538 /* Double.swift */; };
+		2658A59528D9D52000366538 /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A59428D9D52000366538 /* NavigationRouter.swift */; };
+		2658A59728D9D5D300366538 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A59628D9D5D300366538 /* UIStoryboard.swift */; };
+		2658A59928D9D65400366538 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A59828D9D65400366538 /* UIViewController.swift */; };
+		2658A59B28D9D69E00366538 /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A59A28D9D69E00366538 /* NSObject.swift */; };
 		5D5564DE2E44AAC4958961FA /* Pods_CurrencyApplicationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A368C88461BF37597BF52949 /* Pods_CurrencyApplicationTests.framework */; };
 		7D6DBE296A2D264C895110C6 /* Pods_CurrencyApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B16A14F9862155656CA60FF1 /* Pods_CurrencyApplication.framework */; };
 /* End PBXBuildFile section */
@@ -104,6 +108,10 @@
 		2658A58D28D9CCD700366538 /* RateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateModel.swift; sourceTree = "<group>"; };
 		2658A58F28D9CD3700366538 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		2658A59128D9D02A00366538 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		2658A59428D9D52000366538 /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
+		2658A59628D9D5D300366538 /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
+		2658A59828D9D65400366538 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		2658A59A28D9D69E00366538 /* NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
 		281F77C3BC91EF517EEAEEFB /* Pods-CurrencyApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyApplication.debug.xcconfig"; path = "Target Support Files/Pods-CurrencyApplication/Pods-CurrencyApplication.debug.xcconfig"; sourceTree = "<group>"; };
 		37CDFE795CC5A691F548A1E7 /* Pods-CurrencyApplication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyApplication.release.xcconfig"; path = "Target Support Files/Pods-CurrencyApplication/Pods-CurrencyApplication.release.xcconfig"; sourceTree = "<group>"; };
 		770B336AD0F4399FCFEF4907 /* Pods-CurrencyApplicationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyApplicationTests.debug.xcconfig"; path = "Target Support Files/Pods-CurrencyApplicationTests/Pods-CurrencyApplicationTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -166,6 +174,7 @@
 		2658A3A028D8CD1A00366538 /* CurrencyApplication */ = {
 			isa = PBXGroup;
 			children = (
+				2658A59328D9D4FD00366538 /* Router */,
 				2658A58828D9CC2500366538 /* DataSource */,
 				2658A3E828D8EBB800366538 /* Common */,
 				2658A3E728D8EBB800366538 /* Config */,
@@ -236,6 +245,9 @@
 			children = (
 				2658A57028D9B43E00366538 /* URL.swift */,
 				2658A59128D9D02A00366538 /* Double.swift */,
+				2658A59628D9D5D300366538 /* UIStoryboard.swift */,
+				2658A59828D9D65400366538 /* UIViewController.swift */,
+				2658A59A28D9D69E00366538 /* NSObject.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -336,6 +348,14 @@
 				2658A58928D9CC3600366538 /* CurrencyDataSource.swift */,
 			);
 			path = DataSource;
+			sourceTree = "<group>";
+		};
+		2658A59328D9D4FD00366538 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				2658A59428D9D52000366538 /* NavigationRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		B85416B8096DA5141B180560 /* Frameworks */ = {
@@ -536,12 +556,16 @@
 				2658A57728D9B79600366538 /* CurrencyViewController.swift in Sources */,
 				2658A54B28D9A45100366538 /* ReachabilityProtocol.swift in Sources */,
 				2658A3A628D8CD1A00366538 /* ViewController.swift in Sources */,
+				2658A59B28D9D69E00366538 /* NSObject.swift in Sources */,
 				2658A3A228D8CD1A00366538 /* AppDelegate.swift in Sources */,
+				2658A59928D9D65400366538 /* UIViewController.swift in Sources */,
 				2658A54D28D9A45F00366538 /* Reachability.swift in Sources */,
 				2658A3A428D8CD1A00366538 /* SceneDelegate.swift in Sources */,
 				2658A55928D9A7C800366538 /* URLEncoder.swift in Sources */,
+				2658A59528D9D52000366538 /* NavigationRouter.swift in Sources */,
 				2658A54F28D9A46800366538 /* NetworkReachability.swift in Sources */,
 				2658A56B28D9B21C00366538 /* Constants.swift in Sources */,
+				2658A59728D9D5D300366538 /* UIStoryboard.swift in Sources */,
 				2658A57128D9B43E00366538 /* URL.swift in Sources */,
 				2658A55128D9A61000366538 /* HTTPMethod.swift in Sources */,
 				2658A55328D9A64800366538 /* HTTPStatus.swift in Sources */,
@@ -709,6 +733,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 281F77C3BC91EF517EEAEEFB /* Pods-CurrencyApplication.debug.xcconfig */;
 			buildSettings = {
+				ACCESS_KEY = 004ab06d92fb1e883f608678e2fd71bf;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5XF22H3TY5;
@@ -728,6 +753,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 37CDFE795CC5A691F548A1E7 /* Pods-CurrencyApplication.release.xcconfig */;
 			buildSettings = {
+				ACCESS_KEY = 004ab06d92fb1e883f608678e2fd71bf;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5XF22H3TY5;

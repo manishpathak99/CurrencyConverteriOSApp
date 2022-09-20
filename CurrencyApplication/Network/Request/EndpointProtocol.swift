@@ -14,6 +14,7 @@ protocol EndPointType {
     var httpMethod: HTTPMethod { get }
     var task: HTTPTask { get }
     var headers: HTTPHeaders? { get }
+    var baseURLWithParameter: URL { get }
 }
 
 extension EndPointType {

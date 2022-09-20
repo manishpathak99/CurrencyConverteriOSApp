@@ -21,8 +21,8 @@ extension CurrencyApi: EndPointType {
         }
     }
     
-    var urlWithParameter: URL {
-        baseURL.append(parameters) ?? baseURL
+    var baseURLWithParameter: URL {
+       return baseURL.append(parameters) ?? baseURL
     }
     
     var httpMethod: HTTPMethod {
