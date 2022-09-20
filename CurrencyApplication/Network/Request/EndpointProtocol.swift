@@ -15,3 +15,19 @@ protocol EndPointType {
     var task: HTTPTask { get }
     var headers: HTTPHeaders? { get }
 }
+
+extension EndPointType {
+    var baseURL: URL {
+        guard let url = URL(string: RequestConfig.baseUrl) else {
+            fatalError("BaseUrl cannot be configured")
+        }
+        return url
+    }
+    var httpMethod: HTTPMethod {
+        return .get
+    }
+    var headers: HTTPHeaders? {
+        return nil
+    }
+}
+

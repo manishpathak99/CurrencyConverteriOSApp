@@ -29,6 +29,9 @@
 		2658A56328D9AC7B00366538 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A56228D9AC7B00366538 /* NetworkErrors.swift */; };
 		2658A56928D9B1C600366538 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A56828D9B1C600366538 /* Utils.swift */; };
 		2658A56B28D9B21C00366538 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A56A28D9B21C00366538 /* Constants.swift */; };
+		2658A56D28D9B38E00366538 /* CurrencyEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A56C28D9B38E00366538 /* CurrencyEndpoint.swift */; };
+		2658A56F28D9B39A00366538 /* RequestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A56E28D9B39A00366538 /* RequestConfig.swift */; };
+		2658A57128D9B43E00366538 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A57028D9B43E00366538 /* URL.swift */; };
 		5D5564DE2E44AAC4958961FA /* Pods_CurrencyApplicationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A368C88461BF37597BF52949 /* Pods_CurrencyApplicationTests.framework */; };
 		7D6DBE296A2D264C895110C6 /* Pods_CurrencyApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B16A14F9862155656CA60FF1 /* Pods_CurrencyApplication.framework */; };
 /* End PBXBuildFile section */
@@ -70,6 +73,9 @@
 		2658A56228D9AC7B00366538 /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
 		2658A56828D9B1C600366538 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		2658A56A28D9B21C00366538 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2658A56C28D9B38E00366538 /* CurrencyEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyEndpoint.swift; sourceTree = "<group>"; };
+		2658A56E28D9B39A00366538 /* RequestConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestConfig.swift; sourceTree = "<group>"; };
+		2658A57028D9B43E00366538 /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
 		281F77C3BC91EF517EEAEEFB /* Pods-CurrencyApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyApplication.debug.xcconfig"; path = "Target Support Files/Pods-CurrencyApplication/Pods-CurrencyApplication.debug.xcconfig"; sourceTree = "<group>"; };
 		37CDFE795CC5A691F548A1E7 /* Pods-CurrencyApplication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyApplication.release.xcconfig"; path = "Target Support Files/Pods-CurrencyApplication/Pods-CurrencyApplication.release.xcconfig"; sourceTree = "<group>"; };
 		770B336AD0F4399FCFEF4907 /* Pods-CurrencyApplicationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyApplicationTests.debug.xcconfig"; path = "Target Support Files/Pods-CurrencyApplicationTests/Pods-CurrencyApplicationTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -196,6 +202,7 @@
 		2658A3E928D8EBB800366538 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				2658A57028D9B43E00366538 /* URL.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -210,6 +217,7 @@
 		2658A54528D9A3C600366538 /* Endpoints */ = {
 			isa = PBXGroup;
 			children = (
+				2658A56C28D9B38E00366538 /* CurrencyEndpoint.swift */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -235,6 +243,7 @@
 		2658A54828D9A3C700366538 /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				2658A56E28D9B39A00366538 /* RequestConfig.swift */,
 				2658A55028D9A61000366538 /* HTTPMethod.swift */,
 				2658A55228D9A64800366538 /* HTTPStatus.swift */,
 				2658A55C28D9AAFF00366538 /* EndpointProtocol.swift */,
@@ -416,8 +425,10 @@
 			files = (
 				2658A56128D9AC1C00366538 /* NetworkLogger.swift in Sources */,
 				2658A55F28D9AB6300366538 /* HTTPTask.swift in Sources */,
+				2658A56D28D9B38E00366538 /* CurrencyEndpoint.swift in Sources */,
 				2658A55728D9A7B900366538 /* JSONEncoder.swift in Sources */,
 				2658A55528D9A79E00366538 /* HTTPParameterEncoding.swift in Sources */,
+				2658A56F28D9B39A00366538 /* RequestConfig.swift in Sources */,
 				2658A55D28D9AAFF00366538 /* EndpointProtocol.swift in Sources */,
 				2658A56328D9AC7B00366538 /* NetworkErrors.swift in Sources */,
 				2658A55B28D9A7D800366538 /* EncoderProtocol.swift in Sources */,
@@ -429,6 +440,7 @@
 				2658A55928D9A7C800366538 /* URLEncoder.swift in Sources */,
 				2658A54F28D9A46800366538 /* NetworkReachability.swift in Sources */,
 				2658A56B28D9B21C00366538 /* Constants.swift in Sources */,
+				2658A57128D9B43E00366538 /* URL.swift in Sources */,
 				2658A55128D9A61000366538 /* HTTPMethod.swift in Sources */,
 				2658A55328D9A64800366538 /* HTTPStatus.swift in Sources */,
 				2658A56928D9B1C600366538 /* Utils.swift in Sources */,
