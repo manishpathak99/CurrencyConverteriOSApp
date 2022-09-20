@@ -9,6 +9,8 @@
 import Foundation
 
 public typealias Parameters = [String:Any]
+public typealias HTTPHeaders = [String:String]
+
 public protocol ParameterEncoder {
     func encode(urlRequest: inout URLRequest, with parameters: Parameters) throws
 }
