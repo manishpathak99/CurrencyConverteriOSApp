@@ -6,8 +6,6 @@
 //  Copyright © 2022 Manish Pathak. All rights reserved.
 //
 
-import Foundation
-
 struct RateModel : BaseModel  {
     let currency: String
     let value: Double

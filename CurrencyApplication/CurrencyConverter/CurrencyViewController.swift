@@ -77,7 +77,7 @@ class CurrencyViewController: UIViewController {
 
 extension CurrencyViewController {
     
-    func bindActions() {
+    private func bindActions() {
         viewModel.shouldShowLoader.asObservable().subscribe { shouldShow in
             if let shouldShow = shouldShow.element {
                 DispatchQueue.main.async {
@@ -112,8 +112,9 @@ extension CurrencyViewController {
             .disposed(by: disposeBag)
     }
     
-    func setConvertedValue(number: Double){
-        if let fromVal = fromCurrencyButton.titleLabel?.text, let toVal = toCurrencyButton.titleLabel?.text{
+    private func setConvertedValue(number: Double){
+        if let fromVal = fromCurrencyButton.titleLabel?.text,
+            let toVal = toCurrencyButton.titleLabel?.text {
             if  let convertedAmount = viewModel.getConvertedAmountToStr(from: fromVal, to: toVal, numberToConvert: number){
                 convertedTextField.text = "\(convertedAmount)"
             }
