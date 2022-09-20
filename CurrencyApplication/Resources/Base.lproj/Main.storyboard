@@ -24,7 +24,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xq9-B2-RJs">
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xq9-B2-RJs" userLabel="Currency Buttons">
                                 <rect key="frame" x="20" y="223" width="374" height="50"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0kx-Eu-Nr9">
@@ -127,7 +127,7 @@
                                     <constraint firstAttribute="height" constant="50" id="xZq-A1-lPG"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0dI-Zs-Cud">
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0dI-Zs-Cud" userLabel="Currency TextFields">
                                 <rect key="frame" x="20" y="323" width="374" height="50"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZvB-mI-OCr">
@@ -176,11 +176,41 @@
                                     <constraint firstItem="ZvB-mI-OCr" firstAttribute="width" secondItem="5F7-qU-oSe" secondAttribute="width" id="vjL-E1-skD"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xxp-Gf-kQQ" customClass="CurrencyButton" customModule="CurrencyApplication" customModuleProvider="target">
+                                <rect key="frame" x="127" y="423" width="160" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="0Qz-BD-2Ne"/>
+                                    <constraint firstAttribute="height" constant="50" id="Bwq-pF-tEm"/>
+                                    <constraint firstAttribute="width" constant="160" id="fti-Zp-KlO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                <color key="tintColor" red="0.0" green="0.47454108389999999" blue="0.95031140729999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="imageEdgeInsets" minX="15" minY="4" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Details">
+                                    <color key="titleColor" red="0.0" green="0.47454108389999999" blue="0.94520323429999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="customBorderColor">
+                                        <color key="value" red="0.0" green="0.47454108389999999" blue="0.95031140729999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="detailClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WSy-Xd-6cF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="xxp-Gf-kQQ" firstAttribute="top" secondItem="0dI-Zs-Cud" secondAttribute="bottom" constant="50" id="4jX-J4-x5K"/>
                             <constraint firstItem="xq9-B2-RJs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="6cu-2T-TUc"/>
                             <constraint firstItem="xq9-B2-RJs" firstAttribute="top" secondItem="fc3-ih-4p3" secondAttribute="bottom" constant="90" id="AYS-5a-zML"/>
+                            <constraint firstItem="xxp-Gf-kQQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cys-wU-fAp"/>
                             <constraint firstItem="0dI-Zs-Cud" firstAttribute="leading" secondItem="xq9-B2-RJs" secondAttribute="leading" id="ILF-Sv-v2q"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fc3-ih-4p3" secondAttribute="trailing" constant="20" id="JMy-bK-xaZ"/>
                             <constraint firstItem="fc3-ih-4p3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="29" id="Lvv-v1-Nr7"/>
@@ -206,7 +236,7 @@
         <!--Currency Picker View Controller-->
         <scene sceneID="rDV-gd-W3y">
             <objects>
-                <viewController storyboardIdentifier="CurrencyPickerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Vgx-QH-Exb" customClass="CurrencyPickerViewController" customModule="CurrencyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CurrencyPickerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Vgx-QH-Exb" customClass="CurrencyPickerViewController" customModule="CurrencyApplication" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="spU-nr-7Hh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

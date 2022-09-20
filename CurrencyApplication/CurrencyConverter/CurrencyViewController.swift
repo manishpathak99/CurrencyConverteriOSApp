@@ -76,6 +76,10 @@ class CurrencyViewController: UIViewController {
         self.viewModel.swapCurrency()
         self.updateCurrencies()
     }
+    
+    @IBAction func detailClicked(_ sender: Any) {
+        // Navigate to Currency History 
+    }
 }
 
 extension CurrencyViewController {
