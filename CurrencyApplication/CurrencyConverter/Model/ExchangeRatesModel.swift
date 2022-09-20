@@ -1,5 +1,5 @@
 //
-//  BaseModel.swift
+//  ExchangeRatesModel.swift
 //  CurrencyApplication
 //
 //  Created by Manish Pathak on 20/09/22.
@@ -8,5 +8,8 @@
 
 import Foundation
 
-protocol BaseModel: Codable {
+struct ExchangeRatesModel: BaseModel {
+    let base: String
+    let date: String
+    let rates: [String: Double]
 }

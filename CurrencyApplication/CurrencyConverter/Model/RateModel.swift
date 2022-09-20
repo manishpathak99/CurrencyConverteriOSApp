@@ -1,5 +1,5 @@
 //
-//  BaseModel.swift
+//  RateModel.swift
 //  CurrencyApplication
 //
 //  Created by Manish Pathak on 20/09/22.
@@ -8,5 +8,7 @@
 
 import Foundation
 
-protocol BaseModel: Codable {
+struct RateModel : BaseModel  {
+    let currency: String
+    let value: Double
 }
