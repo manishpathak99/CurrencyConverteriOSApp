@@ -96,8 +96,12 @@ extension CurrencyViewModel {
         return nil
     }
     
+    func isBothCurrencySelected() -> Bool {
+        return rateModelArray.count == 2
+    }
+    
     func swapCurrency(){
-        if rateModelArray.count == 2{
+        if isBothCurrencySelected() {
             let rate = rateModelArray[0]
             rateModelArray[0] = rateModelArray[1]
             rateModelArray[1] = rate

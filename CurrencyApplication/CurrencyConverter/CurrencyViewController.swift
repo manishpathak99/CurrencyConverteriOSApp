@@ -72,6 +72,9 @@ class CurrencyViewController: UIViewController {
     
     @IBAction func swapCurrencyClicked(_ sender: Any) {
         // swap the currency
+        self.currencyTextfield.resignFirstResponder()
+        self.viewModel.swapCurrency()
+        self.updateCurrencies()
     }
 }
 
@@ -165,19 +168,13 @@ extension CurrencyViewController : CurrencyPickerViewControllerProtocol{
             let fromCurrency = self.viewModel.rateModelArray.first
             self.fromCurrencyButton.setTitle(fromCurrency?.currency, for: .normal)
         }
-        if self.viewModel.rateModelArray.count > 1 {
+        if viewModel.isBothCurrencySelected() {
             let toCurrency = self.viewModel.rateModelArray.last
             self.toCurrencyButton.setTitle(toCurrency?.currency, for: .normal)
-        }
-        if self.validateSelection() {
             if self.currencyTextfield.text?.count ?? 0 < 1 {
                 self.currencyTextfield.text = "1"
             }
             self.currencyTextfield.becomeFirstResponder()
         }
-    }
-    
-    private func validateSelection() -> Bool {
-        return self.viewModel.rateModelArray.count == 2
     }
 }
