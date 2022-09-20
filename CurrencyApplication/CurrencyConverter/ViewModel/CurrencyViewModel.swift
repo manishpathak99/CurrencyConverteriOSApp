@@ -16,6 +16,7 @@ final class CurrencyViewModel: BaseViewModel {
     var showErrorMessage = BehaviorRelay<String?>(value: nil)
     var reloadData = BehaviorRelay<Bool>(value: false)
     var dataSource: CurrencyDataSourceProtocol
+    var rateModelArray = [RateModel]()
     
     // MARK: View Model initialisation with parameters
     init?(networkManager: NetworkManagerProtocol,
@@ -69,6 +70,37 @@ extension CurrencyViewModel{
                 self.dataSource = dataSourceVal
                 self.reloadData.accept(true)
             }
+        }
+    }
+}
+
+extension CurrencyViewModel {
+    
+    // MARK: Get Converted Value from source to target currency
+    func getConvertedAmountToStr(from : String, to: String, numberToConvert: Double) -> Double? {
+        if let inputToEURRate = getCurrencyDefaultValue(fromCurrency: from), let targetToEURRate = getCurrencyDefaultValue(fromCurrency: to){
+            let total = numberToConvert / inputToEURRate * targetToEURRate
+            return total.rounded(toPlaces: 4)
+        }
+        return nil
+    }
+    
+    private func getCurrencyDefaultValue(fromCurrency : String) -> Double? {
+        if let rates = self.dataSource.rates {
+            for rate in rates {
+                if rate.currency == fromCurrency {
+                    return rate.value
+                }
+            }
+        }
+        return nil
+    }
+    
+    func swapCurrency(){
+        if rateModelArray.count == 2{
+            let rate = rateModelArray[0]
+            rateModelArray[0] = rateModelArray[1]
+            rateModelArray[1] = rate
         }
     }
 }

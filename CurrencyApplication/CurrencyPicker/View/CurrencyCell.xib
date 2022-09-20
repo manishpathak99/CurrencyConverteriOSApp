@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="CurrencyCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="CurrencyCell" id="v1R-Zx-4J5" customClass="CurrencyCell" customModule="CurrencyApplication" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="v1R-Zx-4J5" id="1vX-rM-JQu">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOz-bd-ux5">
+                        <rect key="frame" x="15" y="12" width="42" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.47454108389999999" blue="0.95031140729999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XyQ-v2-xXl">
+                        <rect key="frame" x="263" y="12" width="42" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="TOz-bd-ux5" firstAttribute="leading" secondItem="1vX-rM-JQu" secondAttribute="leading" constant="15" id="48H-uB-9BD"/>
+                    <constraint firstItem="TOz-bd-ux5" firstAttribute="centerY" secondItem="XyQ-v2-xXl" secondAttribute="centerY" id="V94-mN-OyV"/>
+                    <constraint firstAttribute="bottom" secondItem="TOz-bd-ux5" secondAttribute="bottom" constant="12" id="f34-ww-KGK"/>
+                    <constraint firstAttribute="trailing" secondItem="XyQ-v2-xXl" secondAttribute="trailing" constant="15" id="fpW-Xl-eMB"/>
+                    <constraint firstItem="TOz-bd-ux5" firstAttribute="top" secondItem="1vX-rM-JQu" secondAttribute="top" constant="12" id="rfA-Pm-dkM"/>
+                    <constraint firstItem="XyQ-v2-xXl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="TOz-bd-ux5" secondAttribute="trailing" constant="15" id="wG3-yE-Uzi"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="bf0-QA-PLm"/>
+            <connections>
+                <outlet property="currencyLabel" destination="TOz-bd-ux5" id="uZ4-Ng-1Q9"/>
+                <outlet property="rateLabel" destination="XyQ-v2-xXl" id="CQG-8a-dDl"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="96.428571428571431"/>
+        </tableViewCell>
+    </objects>
+</document>

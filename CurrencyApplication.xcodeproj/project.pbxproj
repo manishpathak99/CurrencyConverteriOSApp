@@ -50,6 +50,12 @@
 		2658A59728D9D5D300366538 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A59628D9D5D300366538 /* UIStoryboard.swift */; };
 		2658A59928D9D65400366538 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A59828D9D65400366538 /* UIViewController.swift */; };
 		2658A59B28D9D69E00366538 /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A59A28D9D69E00366538 /* NSObject.swift */; };
+		2658A59E28DA3D8600366538 /* CurrencyPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A59D28DA3D8600366538 /* CurrencyPickerViewController.swift */; };
+		2658A5A128DA3DC600366538 /* CurrencyPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A5A028DA3DC600366538 /* CurrencyPickerViewModel.swift */; };
+		26B9619928DA562C00490829 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B9619828DA562C00490829 /* UITextField.swift */; };
+		26E85CB528DA4057000138C8 /* CurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E85CB428DA4056000138C8 /* CurrencyCell.swift */; };
+		26E85CB728DA4080000138C8 /* CurrencyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26E85CB628DA4080000138C8 /* CurrencyCell.xib */; };
+		26E85CB928DA4B74000138C8 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E85CB828DA4B73000138C8 /* UITableView.swift */; };
 		5D5564DE2E44AAC4958961FA /* Pods_CurrencyApplicationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A368C88461BF37597BF52949 /* Pods_CurrencyApplicationTests.framework */; };
 		7D6DBE296A2D264C895110C6 /* Pods_CurrencyApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B16A14F9862155656CA60FF1 /* Pods_CurrencyApplication.framework */; };
 /* End PBXBuildFile section */
@@ -112,6 +118,12 @@
 		2658A59628D9D5D300366538 /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
 		2658A59828D9D65400366538 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		2658A59A28D9D69E00366538 /* NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
+		2658A59D28DA3D8600366538 /* CurrencyPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPickerViewController.swift; sourceTree = "<group>"; };
+		2658A5A028DA3DC600366538 /* CurrencyPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPickerViewModel.swift; sourceTree = "<group>"; };
+		26B9619828DA562C00490829 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		26E85CB428DA4056000138C8 /* CurrencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCell.swift; sourceTree = "<group>"; };
+		26E85CB628DA4080000138C8 /* CurrencyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrencyCell.xib; sourceTree = "<group>"; };
+		26E85CB828DA4B73000138C8 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		281F77C3BC91EF517EEAEEFB /* Pods-CurrencyApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyApplication.debug.xcconfig"; path = "Target Support Files/Pods-CurrencyApplication/Pods-CurrencyApplication.debug.xcconfig"; sourceTree = "<group>"; };
 		37CDFE795CC5A691F548A1E7 /* Pods-CurrencyApplication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyApplication.release.xcconfig"; path = "Target Support Files/Pods-CurrencyApplication/Pods-CurrencyApplication.release.xcconfig"; sourceTree = "<group>"; };
 		770B336AD0F4399FCFEF4907 /* Pods-CurrencyApplicationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyApplicationTests.debug.xcconfig"; path = "Target Support Files/Pods-CurrencyApplicationTests/Pods-CurrencyApplicationTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -174,14 +186,15 @@
 		2658A3A028D8CD1A00366538 /* CurrencyApplication */ = {
 			isa = PBXGroup;
 			children = (
+				2658A3E528D8EBB800366538 /* Resources */,
 				2658A59328D9D4FD00366538 /* Router */,
 				2658A58828D9CC2500366538 /* DataSource */,
 				2658A3E828D8EBB800366538 /* Common */,
 				2658A3E728D8EBB800366538 /* Config */,
 				2658A3E928D8EBB800366538 /* Extension */,
 				2658A3E628D8EBB800366538 /* Network */,
-				2658A3E528D8EBB800366538 /* Resources */,
 				2658A54428D9A10200366538 /* CurrencyConverter */,
+				2658A59C28DA3D5900366538 /* CurrencyPicker */,
 				2658A3A328D8CD1A00366538 /* SceneDelegate.swift */,
 				2658A3A528D8CD1A00366538 /* ViewController.swift */,
 				2658A3AF28D8CD1C00366538 /* Info.plist */,
@@ -248,6 +261,8 @@
 				2658A59628D9D5D300366538 /* UIStoryboard.swift */,
 				2658A59828D9D65400366538 /* UIViewController.swift */,
 				2658A59A28D9D69E00366538 /* NSObject.swift */,
+				26E85CB828DA4B73000138C8 /* UITableView.swift */,
+				26B9619828DA562C00490829 /* UITextField.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -358,6 +373,33 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		2658A59C28DA3D5900366538 /* CurrencyPicker */ = {
+			isa = PBXGroup;
+			children = (
+				26E85CB328DA4033000138C8 /* View */,
+				2658A59F28DA3DB000366538 /* ViewModel */,
+				2658A59D28DA3D8600366538 /* CurrencyPickerViewController.swift */,
+			);
+			path = CurrencyPicker;
+			sourceTree = "<group>";
+		};
+		2658A59F28DA3DB000366538 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2658A5A028DA3DC600366538 /* CurrencyPickerViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		26E85CB328DA4033000138C8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				26E85CB428DA4056000138C8 /* CurrencyCell.swift */,
+				26E85CB628DA4080000138C8 /* CurrencyCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		B85416B8096DA5141B180560 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -451,6 +493,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26E85CB728DA4080000138C8 /* CurrencyCell.xib in Resources */,
 				2658A3AE28D8CD1C00366538 /* LaunchScreen.storyboard in Resources */,
 				2658A3AB28D8CD1C00366538 /* Assets.xcassets in Resources */,
 				2658A3A928D8CD1A00366538 /* Main.storyboard in Resources */,
@@ -538,12 +581,15 @@
 				2658A56128D9AC1C00366538 /* NetworkLogger.swift in Sources */,
 				2658A58728D9CABF00366538 /* ParseManager.swift in Sources */,
 				2658A55F28D9AB6300366538 /* HTTPTask.swift in Sources */,
+				26B9619928DA562C00490829 /* UITextField.swift in Sources */,
 				2658A58528D9CAB200366538 /* DataHandler.swift in Sources */,
 				2658A56D28D9B38E00366538 /* CurrencyEndpoint.swift in Sources */,
 				2658A55728D9A7B900366538 /* JSONEncoder.swift in Sources */,
 				2658A58C28D9CCAE00366538 /* ExchangeRatesModel.swift in Sources */,
+				26E85CB928DA4B74000138C8 /* UITableView.swift in Sources */,
 				2658A58A28D9CC3700366538 /* CurrencyDataSource.swift in Sources */,
 				2658A57928D9BA5400366538 /* CurrencyButton.swift in Sources */,
+				2658A59E28DA3D8600366538 /* CurrencyPickerViewController.swift in Sources */,
 				2658A57B28D9C26D00366538 /* BaseViewModel.swift in Sources */,
 				2658A59028D9CD3800366538 /* Router.swift in Sources */,
 				2658A55528D9A79E00366538 /* HTTPParameterEncoding.swift in Sources */,
@@ -552,6 +598,7 @@
 				2658A55D28D9AAFF00366538 /* EndpointProtocol.swift in Sources */,
 				2658A57D28D9C27D00366538 /* BaseModel.swift in Sources */,
 				2658A56328D9AC7B00366538 /* NetworkErrors.swift in Sources */,
+				26E85CB528DA4057000138C8 /* CurrencyCell.swift in Sources */,
 				2658A55B28D9A7D800366538 /* EncoderProtocol.swift in Sources */,
 				2658A57728D9B79600366538 /* CurrencyViewController.swift in Sources */,
 				2658A54B28D9A45100366538 /* ReachabilityProtocol.swift in Sources */,
@@ -572,6 +619,7 @@
 				2658A58328D9CA9900366538 /* NetworkManager.swift in Sources */,
 				2658A56928D9B1C600366538 /* Utils.swift in Sources */,
 				2658A58128D9C84800366538 /* CurrencyViewModel.swift in Sources */,
+				2658A5A128DA3DC600366538 /* CurrencyPickerViewModel.swift in Sources */,
 				2658A58E28D9CCD700366538 /* RateModel.swift in Sources */,
 				2658A57F28D9C74B00366538 /* UIUtils.swift in Sources */,
 			);

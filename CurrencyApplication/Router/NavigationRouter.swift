@@ -25,4 +25,11 @@ class NavigationRouter {
         }
         return nil
     }
+    
+    static func openCurrencyPickerViewController(fromViewController : UIViewController, viewModel : CurrencyPickerViewModel){
+        let pickerViewController : CurrencyPickerViewController = UIStoryboard.main.getViewController()
+        pickerViewController.configure(viewModel: viewModel)
+        pickerViewController.delegate = fromViewController as? CurrencyPickerViewControllerProtocol
+        fromViewController.present(pickerViewController, animated: true, completion: nil)
+    }
 }
