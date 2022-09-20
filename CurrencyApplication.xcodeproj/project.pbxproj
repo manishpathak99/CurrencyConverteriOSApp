@@ -14,6 +14,9 @@
 		2658A3AB28D8CD1C00366538 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2658A3AA28D8CD1C00366538 /* Assets.xcassets */; };
 		2658A3AE28D8CD1C00366538 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2658A3AC28D8CD1C00366538 /* LaunchScreen.storyboard */; };
 		2658A3D928D8CF8600366538 /* CurrencyApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A3D828D8CF8600366538 /* CurrencyApplicationTests.swift */; };
+		2658A54B28D9A45100366538 /* ReachabilityProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A54A28D9A45100366538 /* ReachabilityProtocol.swift */; };
+		2658A54D28D9A45F00366538 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A54C28D9A45F00366538 /* Reachability.swift */; };
+		2658A54F28D9A46800366538 /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A54E28D9A46800366538 /* NetworkReachability.swift */; };
 		5D5564DE2E44AAC4958961FA /* Pods_CurrencyApplicationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A368C88461BF37597BF52949 /* Pods_CurrencyApplicationTests.framework */; };
 		7D6DBE296A2D264C895110C6 /* Pods_CurrencyApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B16A14F9862155656CA60FF1 /* Pods_CurrencyApplication.framework */; };
 /* End PBXBuildFile section */
@@ -40,6 +43,9 @@
 		2658A3D628D8CF8600366538 /* CurrencyApplicationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurrencyApplicationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2658A3D828D8CF8600366538 /* CurrencyApplicationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyApplicationTests.swift; sourceTree = "<group>"; };
 		2658A3DA28D8CF8600366538 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2658A54A28D9A45100366538 /* ReachabilityProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityProtocol.swift; sourceTree = "<group>"; };
+		2658A54C28D9A45F00366538 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		2658A54E28D9A46800366538 /* NetworkReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
 		281F77C3BC91EF517EEAEEFB /* Pods-CurrencyApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyApplication.debug.xcconfig"; path = "Target Support Files/Pods-CurrencyApplication/Pods-CurrencyApplication.debug.xcconfig"; sourceTree = "<group>"; };
 		37CDFE795CC5A691F548A1E7 /* Pods-CurrencyApplication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyApplication.release.xcconfig"; path = "Target Support Files/Pods-CurrencyApplication/Pods-CurrencyApplication.release.xcconfig"; sourceTree = "<group>"; };
 		770B336AD0F4399FCFEF4907 /* Pods-CurrencyApplicationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyApplicationTests.debug.xcconfig"; path = "Target Support Files/Pods-CurrencyApplicationTests/Pods-CurrencyApplicationTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -107,6 +113,7 @@
 				2658A3E928D8EBB800366538 /* Extension */,
 				2658A3E628D8EBB800366538 /* Network */,
 				2658A3E528D8EBB800366538 /* Resources */,
+				2658A54428D9A10200366538 /* CurrencyConverter */,
 				2658A3A328D8CD1A00366538 /* SceneDelegate.swift */,
 				2658A3A528D8CD1A00366538 /* ViewController.swift */,
 				2658A3AF28D8CD1C00366538 /* Info.plist */,
@@ -136,6 +143,11 @@
 		2658A3E628D8EBB800366538 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				2658A54928D9A43A00366538 /* Reachability */,
+				2658A54628D9A3C600366538 /* Services */,
+				2658A54728D9A3C600366538 /* Encoding */,
+				2658A54528D9A3C600366538 /* Endpoints */,
+				2658A54828D9A3C700366538 /* Request */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -160,6 +172,51 @@
 			children = (
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		2658A54428D9A10200366538 /* CurrencyConverter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CurrencyConverter;
+			sourceTree = "<group>";
+		};
+		2658A54528D9A3C600366538 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		2658A54628D9A3C600366538 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2658A54728D9A3C600366538 /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		2658A54828D9A3C700366538 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		2658A54928D9A43A00366538 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				2658A54A28D9A45100366538 /* ReachabilityProtocol.swift */,
+				2658A54C28D9A45F00366538 /* Reachability.swift */,
+				2658A54E28D9A46800366538 /* NetworkReachability.swift */,
+			);
+			path = Reachability;
 			sourceTree = "<group>";
 		};
 		B85416B8096DA5141B180560 /* Frameworks */ = {
@@ -321,9 +378,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2658A54B28D9A45100366538 /* ReachabilityProtocol.swift in Sources */,
 				2658A3A628D8CD1A00366538 /* ViewController.swift in Sources */,
 				2658A3A228D8CD1A00366538 /* AppDelegate.swift in Sources */,
+				2658A54D28D9A45F00366538 /* Reachability.swift in Sources */,
 				2658A3A428D8CD1A00366538 /* SceneDelegate.swift in Sources */,
+				2658A54F28D9A46800366538 /* NetworkReachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
