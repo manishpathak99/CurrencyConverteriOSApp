@@ -27,6 +27,8 @@
 		2658A55F28D9AB6300366538 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A55E28D9AB6300366538 /* HTTPTask.swift */; };
 		2658A56128D9AC1C00366538 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A56028D9AC1C00366538 /* NetworkLogger.swift */; };
 		2658A56328D9AC7B00366538 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A56228D9AC7B00366538 /* NetworkErrors.swift */; };
+		2658A56928D9B1C600366538 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A56828D9B1C600366538 /* Utils.swift */; };
+		2658A56B28D9B21C00366538 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A56A28D9B21C00366538 /* Constants.swift */; };
 		5D5564DE2E44AAC4958961FA /* Pods_CurrencyApplicationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A368C88461BF37597BF52949 /* Pods_CurrencyApplicationTests.framework */; };
 		7D6DBE296A2D264C895110C6 /* Pods_CurrencyApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B16A14F9862155656CA60FF1 /* Pods_CurrencyApplication.framework */; };
 /* End PBXBuildFile section */
@@ -66,6 +68,8 @@
 		2658A55E28D9AB6300366538 /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
 		2658A56028D9AC1C00366538 /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
 		2658A56228D9AC7B00366538 /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
+		2658A56828D9B1C600366538 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		2658A56A28D9B21C00366538 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		281F77C3BC91EF517EEAEEFB /* Pods-CurrencyApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyApplication.debug.xcconfig"; path = "Target Support Files/Pods-CurrencyApplication/Pods-CurrencyApplication.debug.xcconfig"; sourceTree = "<group>"; };
 		37CDFE795CC5A691F548A1E7 /* Pods-CurrencyApplication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyApplication.release.xcconfig"; path = "Target Support Files/Pods-CurrencyApplication/Pods-CurrencyApplication.release.xcconfig"; sourceTree = "<group>"; };
 		770B336AD0F4399FCFEF4907 /* Pods-CurrencyApplicationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyApplicationTests.debug.xcconfig"; path = "Target Support Files/Pods-CurrencyApplicationTests/Pods-CurrencyApplicationTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -183,6 +187,8 @@
 		2658A3E828D8EBB800366538 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				2658A56828D9B1C600366538 /* Utils.swift */,
+				2658A56A28D9B21C00366538 /* Constants.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -422,8 +428,10 @@
 				2658A3A428D8CD1A00366538 /* SceneDelegate.swift in Sources */,
 				2658A55928D9A7C800366538 /* URLEncoder.swift in Sources */,
 				2658A54F28D9A46800366538 /* NetworkReachability.swift in Sources */,
+				2658A56B28D9B21C00366538 /* Constants.swift in Sources */,
 				2658A55128D9A61000366538 /* HTTPMethod.swift in Sources */,
 				2658A55328D9A64800366538 /* HTTPStatus.swift in Sources */,
+				2658A56928D9B1C600366538 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
