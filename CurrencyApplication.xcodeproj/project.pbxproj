@@ -210,6 +210,9 @@
 		2658A54428D9A10200366538 /* CurrencyConverter */ = {
 			isa = PBXGroup;
 			children = (
+				2658A57528D9B73100366538 /* Model */,
+				2658A57328D9B73100366538 /* View */,
+				2658A57428D9B73100366538 /* ViewModel */,
 			);
 			path = CurrencyConverter;
 			sourceTree = "<group>";
@@ -262,6 +265,27 @@
 				2658A54E28D9A46800366538 /* NetworkReachability.swift */,
 			);
 			path = Reachability;
+			sourceTree = "<group>";
+		};
+		2658A57328D9B73100366538 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2658A57428D9B73100366538 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2658A57528D9B73100366538 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		B85416B8096DA5141B180560 /* Frameworks */ = {
