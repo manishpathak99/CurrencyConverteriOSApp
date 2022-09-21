@@ -191,7 +191,7 @@ extension CurrencyViewController: CurrencyPickerViewControllerProtocol {
         if let toCurrency = viewModel.currencyDict[ActionState.toCurrencyClicked] {
             self.toCurrencyButton.setTitle(toCurrency.currency, for: .normal)
         }
-        
+
         if let _ = viewModel.currencyDict[ActionState.fromCurrencyClicked],
             let _ = viewModel.currencyDict[ActionState.toCurrencyClicked] {
             if self.currencyTextfield.text?.count ?? 0 < 1 {

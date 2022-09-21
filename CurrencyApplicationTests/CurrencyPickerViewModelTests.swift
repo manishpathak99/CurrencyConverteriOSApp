@@ -11,16 +11,16 @@ import RxSwift
 @testable import CurrencyApplication
 
 class CurrencyPickerViewModelTests: XCTestCase {
-    var viewModel : CurrencyPickerViewModel!
-    fileprivate var tableDataSource : MockTableDataSource!
+    var viewModel: CurrencyPickerViewModel!
+    fileprivate var tableDataSource: MockTableDataSource!
     fileprivate var disposeBag = DisposeBag()
-    
+
     override func setUp() {
         super.setUp()
         self.tableDataSource = MockTableDataSource()
         self.viewModel = CurrencyPickerViewModel(dataSource: tableDataSource)
     }
-    
+
     override func tearDown() {
         self.viewModel = nil
         self.tableDataSource = nil
