@@ -16,7 +16,7 @@ final class CurrencyViewModel: BaseViewModel {
     var showErrorMessage = BehaviorRelay<String?>(value: nil)
     var reloadData = BehaviorRelay<Bool>(value: false)
     var dataSource: CurrencyDataSourceProtocol
-    var rateModelArray = [RateModel]()
+    var currencyDict = [AnyHashable: RateModel]()
 
     // MARK: View Model initialisation with parameters
     init?(networkManager: NetworkManagerProtocol,
@@ -115,14 +115,15 @@ extension CurrencyViewModel {
     }
 
     func isBothCurrencySelected() -> Bool {
-        return rateModelArray.count == 2
+        if let _ = currencyDict[ActionState.fromCurrencyClicked], let _ = currencyDict[ActionState.toCurrencyClicked] { return true }
+        return false
     }
 
     func swapCurrency() {
         if isBothCurrencySelected() {
-            let rate = rateModelArray[0]
-            rateModelArray[0] = rateModelArray[1]
-            rateModelArray[1] = rate
+            let rate = currencyDict[ActionState.fromCurrencyClicked]
+            currencyDict[ActionState.fromCurrencyClicked] = currencyDict[ActionState.toCurrencyClicked]
+            currencyDict[ActionState.toCurrencyClicked] = rate
         }
     }
 }

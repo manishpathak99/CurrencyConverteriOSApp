@@ -27,7 +27,6 @@
 		2658A56128D9AC1C00366538 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A56028D9AC1C00366538 /* NetworkLogger.swift */; };
 		2658A56328D9AC7B00366538 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A56228D9AC7B00366538 /* NetworkErrors.swift */; };
 		2658A56928D9B1C600366538 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A56828D9B1C600366538 /* Utils.swift */; };
-		2658A56B28D9B21C00366538 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A56A28D9B21C00366538 /* Constants.swift */; };
 		2658A56D28D9B38E00366538 /* CurrencyEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A56C28D9B38E00366538 /* CurrencyEndpoint.swift */; };
 		2658A56F28D9B39A00366538 /* RequestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A56E28D9B39A00366538 /* RequestConfig.swift */; };
 		2658A57128D9B43E00366538 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A57028D9B43E00366538 /* URL.swift */; };
@@ -35,7 +34,6 @@
 		2658A57928D9BA5400366538 /* CurrencyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A57828D9BA5400366538 /* CurrencyButton.swift */; };
 		2658A57B28D9C26D00366538 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A57A28D9C26D00366538 /* BaseViewModel.swift */; };
 		2658A57D28D9C27D00366538 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A57C28D9C27D00366538 /* BaseModel.swift */; };
-		2658A57F28D9C74B00366538 /* UIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A57E28D9C74B00366538 /* UIUtils.swift */; };
 		2658A58128D9C84800366538 /* CurrencyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A58028D9C84800366538 /* CurrencyViewModel.swift */; };
 		2658A58328D9CA9900366538 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A58228D9CA9900366538 /* NetworkManager.swift */; };
 		2658A58528D9CAB200366538 /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A58428D9CAB200366538 /* DataHandler.swift */; };
@@ -100,7 +98,6 @@
 		2658A56028D9AC1C00366538 /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
 		2658A56228D9AC7B00366538 /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
 		2658A56828D9B1C600366538 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		2658A56A28D9B21C00366538 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2658A56C28D9B38E00366538 /* CurrencyEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyEndpoint.swift; sourceTree = "<group>"; };
 		2658A56E28D9B39A00366538 /* RequestConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestConfig.swift; sourceTree = "<group>"; };
 		2658A57028D9B43E00366538 /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
@@ -108,7 +105,6 @@
 		2658A57828D9BA5400366538 /* CurrencyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyButton.swift; sourceTree = "<group>"; };
 		2658A57A28D9C26D00366538 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		2658A57C28D9C27D00366538 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
-		2658A57E28D9C74B00366538 /* UIUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUtils.swift; sourceTree = "<group>"; };
 		2658A58028D9C84800366538 /* CurrencyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewModel.swift; sourceTree = "<group>"; };
 		2658A58228D9CA9900366538 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		2658A58428D9CAB200366538 /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
@@ -265,10 +261,8 @@
 			isa = PBXGroup;
 			children = (
 				2658A56828D9B1C600366538 /* Utils.swift */,
-				2658A56A28D9B21C00366538 /* Constants.swift */,
 				2658A57A28D9C26D00366538 /* BaseViewModel.swift */,
 				2658A57C28D9C27D00366538 /* BaseModel.swift */,
-				2658A57E28D9C74B00366538 /* UIUtils.swift */,
 				26D10C5228DAFB030012C9C7 /* CurrencyCache.swift */,
 				26D10C5428DAFC0A0012C9C7 /* Date.swift */,
 			);
@@ -655,7 +649,6 @@
 				2658A54F28D9A46800366538 /* NetworkReachability.swift in Sources */,
 				26D10C4B28DAF6890012C9C7 /* HistoryViewController.swift in Sources */,
 				26D10C5528DAFC0A0012C9C7 /* Date.swift in Sources */,
-				2658A56B28D9B21C00366538 /* Constants.swift in Sources */,
 				2658A59728D9D5D300366538 /* UIStoryboard.swift in Sources */,
 				2658A57128D9B43E00366538 /* URL.swift in Sources */,
 				2658A55128D9A61000366538 /* HTTPMethod.swift in Sources */,
@@ -665,7 +658,6 @@
 				2658A58128D9C84800366538 /* CurrencyViewModel.swift in Sources */,
 				2658A5A128DA3DC600366538 /* CurrencyPickerViewModel.swift in Sources */,
 				2658A58E28D9CCD700366538 /* RateModel.swift in Sources */,
-				2658A57F28D9C74B00366538 /* UIUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

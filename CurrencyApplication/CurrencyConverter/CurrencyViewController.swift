@@ -10,9 +10,9 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-enum ActionState {
-    case fromCurrencyClicked
-    case toCurrencyClicked
+enum ActionState: String {
+    case fromCurrencyClicked = "from"
+    case toCurrencyClicked = "to"
 }
 
 final class CurrencyViewController: UIViewController {
@@ -179,22 +179,21 @@ extension CurrencyViewController: UITextFieldDelegate { }
 
 extension CurrencyViewController: CurrencyPickerViewControllerProtocol {
     func didSelectCurrencyFromList(rateModel: RateModel) {
-        if self.clickedState == .fromCurrencyClicked {
-            self.viewModel.rateModelArray.insert(rateModel, at: 0)
-        } else {
-            self.viewModel.rateModelArray.insert(rateModel, at: 1)
-        }
+        self.viewModel.currencyDict.updateValue(rateModel, forKey: clickedState)
         self.updateCurrencies()
     }
 
     private func updateCurrencies() {
-        if !self.viewModel.rateModelArray.isEmpty {
-            let fromCurrency = self.viewModel.rateModelArray.first
-            self.fromCurrencyButton.setTitle(fromCurrency?.currency, for: .normal)
+        if let fromCurrency = viewModel.currencyDict[ActionState.fromCurrencyClicked] {
+            self.fromCurrencyButton.setTitle(fromCurrency.currency, for: .normal)
         }
-        if viewModel.isBothCurrencySelected() {
-            let toCurrency = self.viewModel.rateModelArray.last
-            self.toCurrencyButton.setTitle(toCurrency?.currency, for: .normal)
+
+        if let toCurrency = viewModel.currencyDict[ActionState.toCurrencyClicked] {
+            self.toCurrencyButton.setTitle(toCurrency.currency, for: .normal)
+        }
+        
+        if let _ = viewModel.currencyDict[ActionState.fromCurrencyClicked],
+            let _ = viewModel.currencyDict[ActionState.toCurrencyClicked] {
             if self.currencyTextfield.text?.count ?? 0 < 1 {
                 self.currencyTextfield.text = "1"
             }
