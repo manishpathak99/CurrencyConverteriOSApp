@@ -26,6 +26,7 @@ final class CurrencyDataSource: CurrencyDataSourceProtocol {
     func getSectionCount() -> Int {
         return 1
     }
+    
     func getRowCount() -> Int? {
         return rates?.count
     }

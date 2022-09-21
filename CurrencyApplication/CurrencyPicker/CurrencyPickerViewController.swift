@@ -48,7 +48,6 @@ final class CurrencyPickerViewController: UIViewController {
     }
 
     func bindActions() {
-
         viewModel.shouldShowLoader.asObservable().subscribe { shouldShow in
             if let shouldShow = shouldShow.element {
                 DispatchQueue.main.async {

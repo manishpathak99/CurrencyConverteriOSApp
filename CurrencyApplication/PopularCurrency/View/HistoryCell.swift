@@ -54,7 +54,6 @@ class HistoryCell: UITableViewCell {
         toolBar.isTranslucent = true
         toolBar.tintColor = UIColor.gray
         toolBar.sizeToFit()
-
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(HistoryCell.doneClick))
         let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         toolBar.setItems([spaceButton, doneButton], animated: false)

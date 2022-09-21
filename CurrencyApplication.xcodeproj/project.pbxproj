@@ -833,7 +833,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 281F77C3BC91EF517EEAEEFB /* Pods-CurrencyApplication.debug.xcconfig */;
 			buildSettings = {
-				ACCESS_KEY = 004ab06d92fb1e883f608678e2fd71bf;
+				ACCESS_KEY = 2d2260fc2fc2ebdf9f63c14259ca9cf6;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5XF22H3TY5;
@@ -853,7 +853,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 37CDFE795CC5A691F548A1E7 /* Pods-CurrencyApplication.release.xcconfig */;
 			buildSettings = {
-				ACCESS_KEY = 004ab06d92fb1e883f608678e2fd71bf;
+				ACCESS_KEY = 2d2260fc2fc2ebdf9f63c14259ca9cf6;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5XF22H3TY5;
