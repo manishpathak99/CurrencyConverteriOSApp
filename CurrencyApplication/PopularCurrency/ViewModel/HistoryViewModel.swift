@@ -57,11 +57,6 @@ final class HistoryViewModel: BaseViewModel {
         return self.historicalDataSource.rates?[index]
     }
 
-    // MARK: Title Value
-    var titleLabelValue: String {
-        return ""//uiConfig.historicalTitle ?? ""
-    }
-
     func getHistoricalList() {
         self.fetchCurrencyHistoricalData()
     }

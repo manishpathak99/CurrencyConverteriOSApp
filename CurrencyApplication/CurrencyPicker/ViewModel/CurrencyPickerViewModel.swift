@@ -41,11 +41,6 @@ final class CurrencyPickerViewModel: BaseViewModel {
         return nil
     }
 
-    // MARK: Title Value
-    var titleLabelValue: String {
-        return ""
-//        return uiConfig.selectionTitle ?? ""
-    }
     // MARK: Today Date
     var todayDate: String {
         let today = Date()

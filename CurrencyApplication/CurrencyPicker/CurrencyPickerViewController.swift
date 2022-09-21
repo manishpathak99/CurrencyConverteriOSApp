@@ -43,7 +43,6 @@ final class CurrencyPickerViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     func setupCurrencyList() {
-        titlelabel.text = viewModel.titleLabelValue
         datelabel.text = self.viewModel.todayDate
         currencyList.tableFooterView = UIView()
     }
