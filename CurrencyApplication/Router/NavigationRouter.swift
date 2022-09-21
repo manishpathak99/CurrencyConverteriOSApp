@@ -6,7 +6,6 @@
 //  Copyright © 2022 Manish Pathak. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class NavigationRouter {
@@ -31,5 +30,11 @@ class NavigationRouter {
         pickerViewController.configure(viewModel: viewModel)
         pickerViewController.delegate = fromViewController as? CurrencyPickerViewControllerProtocol
         fromViewController.present(pickerViewController, animated: true, completion: nil)
+    }
+    
+    static func openHistoryViewController(fromviewController : UIViewController, viewModel : HistoryViewModel){
+        let historyViewController : HistoryViewController = UIStoryboard.main.getViewController()
+        historyViewController.configureViewModel(viewModel: viewModel)
+        fromviewController.navigationController?.pushViewController(historyViewController, animated: true)
     }
 }

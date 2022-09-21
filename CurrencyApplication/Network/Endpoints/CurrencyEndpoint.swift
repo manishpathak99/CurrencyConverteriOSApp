@@ -8,8 +8,9 @@
 
 import Foundation
 
-public enum CurrencyApi{
+public enum CurrencyApi {
     case getCurrenciessUri
+    case historyUri
 }
 
 extension CurrencyApi: EndPointType {
@@ -18,6 +19,8 @@ extension CurrencyApi: EndPointType {
         switch self {
         case .getCurrenciessUri:
             return "latest"
+        case .historyUri:
+            return CurrencyCache.shared.getSelectDate()
         }
     }
     
@@ -49,6 +52,13 @@ extension CurrencyApi: EndPointType {
                 return []
             }
             return [URLQueryItem(name: "access_key", value: key)]
+            
+        case .historyUri:
+            guard let key = accessKey else {
+                assertionFailure("Missing accessKey")
+                return []
+            }
+            return [URLQueryItem(name: "access_key", value: key), URLQueryItem(name: "symbols", value: CurrencyCache.shared.getQueryParameter())]
         }
     }
 }

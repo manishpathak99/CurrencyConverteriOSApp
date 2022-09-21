@@ -78,7 +78,12 @@ class CurrencyViewController: UIViewController {
     }
     
     @IBAction func detailClicked(_ sender: Any) {
-        // Navigate to Currency History 
+        // Navigate to Currency History
+        if let viewModel = HistoryViewModel(networkManager: viewModel.networkManager,
+                                            dataSource: viewModel.dataSource,
+                                            parseManager: viewModel.parseManager) {
+            NavigationRouter.openHistoryViewController(fromviewController: self, viewModel: viewModel)
+        }
     }
 }
 

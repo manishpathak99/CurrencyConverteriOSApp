@@ -231,7 +231,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="92.410714285714278"/>
+            <point key="canvasLocation" x="-283" y="65"/>
         </scene>
         <!--Currency Picker View Controller-->
         <scene sceneID="rDV-gd-W3y">
@@ -313,7 +313,75 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3hC-H7-IIk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1249" y="92"/>
+            <point key="canvasLocation" x="572" y="65"/>
+        </scene>
+        <!--History View Controller-->
+        <scene sceneID="pEc-b7-xFg">
+            <objects>
+                <viewController storyboardIdentifier="HistoryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RCu-Nq-tef" customClass="HistoryViewController" customModule="CurrencyApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gGn-go-iU4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9Bp-Gm-upo">
+                                <rect key="frame" x="0.0" y="94" width="414" height="802"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bi7-1W-cfE">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Giz-I3-pgW">
+                                        <rect key="frame" x="183" y="13" width="48" height="24"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1DZ-0O-IwJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="48" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GwI-dd-dcX">
+                                        <rect key="frame" x="15" y="2.5" width="45" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="ZlY-P6-K6k"/>
+                                            <constraint firstAttribute="height" constant="45" id="phe-YH-oKF"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="backButtonClicked:" destination="RCu-Nq-tef" eventType="touchUpInside" id="1AE-I3-bsH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="Giz-I3-pgW" firstAttribute="centerY" secondItem="Bi7-1W-cfE" secondAttribute="centerY" id="6mA-wT-kz8"/>
+                                    <constraint firstItem="GwI-dd-dcX" firstAttribute="leading" secondItem="Bi7-1W-cfE" secondAttribute="leading" constant="15" id="Viq-c2-3i0"/>
+                                    <constraint firstAttribute="height" constant="50" id="bFK-O2-Efn"/>
+                                    <constraint firstItem="GwI-dd-dcX" firstAttribute="centerY" secondItem="Bi7-1W-cfE" secondAttribute="centerY" id="lkh-CK-jqf"/>
+                                    <constraint firstItem="Giz-I3-pgW" firstAttribute="centerX" secondItem="Bi7-1W-cfE" secondAttribute="centerX" id="pp2-c0-Y2e"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Bi7-1W-cfE" firstAttribute="trailing" secondItem="kmq-85-wAt" secondAttribute="trailing" id="G7C-L7-HiF"/>
+                            <constraint firstItem="Bi7-1W-cfE" firstAttribute="top" secondItem="kmq-85-wAt" secondAttribute="top" id="HhX-02-cfX"/>
+                            <constraint firstItem="9Bp-Gm-upo" firstAttribute="top" secondItem="Bi7-1W-cfE" secondAttribute="bottom" id="Zlw-KR-4c0"/>
+                            <constraint firstAttribute="bottom" secondItem="9Bp-Gm-upo" secondAttribute="bottom" id="eIf-7Y-Hgh"/>
+                            <constraint firstItem="Bi7-1W-cfE" firstAttribute="leading" secondItem="kmq-85-wAt" secondAttribute="leading" id="pXp-03-jrP"/>
+                            <constraint firstItem="9Bp-Gm-upo" firstAttribute="leading" secondItem="kmq-85-wAt" secondAttribute="leading" id="sQE-ph-SLt"/>
+                            <constraint firstItem="9Bp-Gm-upo" firstAttribute="trailing" secondItem="kmq-85-wAt" secondAttribute="trailing" id="uN8-ok-jLj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kmq-85-wAt"/>
+                    </view>
+                    <connections>
+                        <outlet property="historyTableView" destination="9Bp-Gm-upo" id="ORK-g6-2uA"/>
+                        <outlet property="titleLabel" destination="1DZ-0O-IwJ" id="beX-wq-oqL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dlI-jD-DNm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1397" y="65"/>
         </scene>
     </scenes>
     <resources>

@@ -21,3 +21,15 @@ prefix func && (string: String?) -> String {
     return NSLocalizedString(string, comment: "")
 }
 
+final class Utils {
+    static var userDefaults = UserDefaults.standard
+    static func setUserDefaultData(_ userDefaultsData: Any?, forKey key:String) {
+        userDefaults.set(userDefaultsData, forKey: key)
+        userDefaults.synchronize()
+    }
+    
+    static func getUserDefaultsData(forKey key: String) -> Any? {
+        return userDefaults.object(forKey: key)
+    }
+}
+
