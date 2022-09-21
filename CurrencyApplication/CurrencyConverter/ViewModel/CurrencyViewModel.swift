@@ -30,6 +30,24 @@ final class CurrencyViewModel: BaseViewModel {
     func getCurrencyList() {
         self.fetchCurrencies()
     }
+    
+    func getLabelData() -> [String]{
+         var labels  = [String]()
+         labels.append(todayDate)
+         labels.append(baseCurrency)
+         return labels
+     }
+    
+    private var todayDate : String {
+        let today = Date()
+        let formatter1 = DateFormatter()
+        formatter1.dateStyle = .short
+        return "(Rates as on date \(dataSource.date ?? formatter1.string(from: today)))"
+    }
+    
+    private var baseCurrency : String{
+        return "\(&&"Base_Currency") \(dataSource.base ?? "EUR")"
+    }
 }
 
 extension CurrencyViewModel{

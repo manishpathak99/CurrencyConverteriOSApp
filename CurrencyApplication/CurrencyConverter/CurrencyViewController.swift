@@ -20,6 +20,7 @@ final class CurrencyViewController: UIViewController {
     // MARK: - IBOutlet
     @IBOutlet private weak var fromCurrencyButton: CurrencyButton!
     @IBOutlet private weak var toCurrencyButton: CurrencyButton!
+    @IBOutlet private weak var asOnDateLabel: UILabel!
     @IBOutlet private weak var currencyTextfield: UITextField!
     @IBOutlet private weak var convertedTextField: UITextField! {
         didSet{
@@ -47,6 +48,7 @@ final class CurrencyViewController: UIViewController {
         setupLoaderView()
         currencyTextfield.keyboardType = .decimalPad
         currencyTextfield.setBorder(color: .blue)
+        convertedTextField.setBorder(color: .blue)
         dismissKeyboard(currencyTextfield)
     }
     
@@ -111,6 +113,16 @@ extension CurrencyViewController {
             }
         }).disposed(by: disposeBag)
         
+        viewModel.reloadData.asObservable().subscribe { shouldReload in
+            if let shouldReload = shouldReload.element {
+                DispatchQueue.main.async {
+                    if shouldReload{
+                        self.updateLabels()
+                    }
+                }
+            }
+        }.disposed(by: disposeBag)
+        
         numberToConvert.asObservable().subscribe { [unowned self] value in
             self.setConvertedValue(number: self.numberToConvert.value)
             
@@ -139,6 +151,10 @@ extension CurrencyViewController {
         if let viewModel = CurrencyPickerViewModel(dataSource: viewModel.dataSource){
             NavigationRouter.openCurrencyPickerViewController(fromViewController: self, viewModel: viewModel)
         }
+    }
+
+    private func updateLabels() {
+        asOnDateLabel.text = viewModel.getLabelData()[0]
     }
 }
 

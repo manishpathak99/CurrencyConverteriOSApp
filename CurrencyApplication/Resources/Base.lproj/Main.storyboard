@@ -16,16 +16,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency Converter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fc3-ih-4p3">
-                                <rect key="frame" x="20" y="73" width="374" height="60"/>
+                                <rect key="frame" x="20" y="73" width="374" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="6Vq-cf-Wev"/>
+                                    <constraint firstAttribute="height" constant="40" id="6Vq-cf-Wev"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DtC-Hd-oL3">
+                                <rect key="frame" x="20" y="113" width="374" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="DSz-rv-gm4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xq9-B2-RJs" userLabel="Currency Buttons">
-                                <rect key="frame" x="20" y="223" width="374" height="50"/>
+                                <rect key="frame" x="20" y="203" width="374" height="50"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0kx-Eu-Nr9">
                                         <rect key="frame" x="0.0" y="0.0" width="154" height="50"/>
@@ -128,7 +137,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0dI-Zs-Cud" userLabel="Currency TextFields">
-                                <rect key="frame" x="20" y="323" width="374" height="50"/>
+                                <rect key="frame" x="20" y="303" width="374" height="50"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZvB-mI-OCr">
                                         <rect key="frame" x="0.0" y="0.0" width="154" height="50"/>
@@ -177,7 +186,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xxp-Gf-kQQ" customClass="CurrencyButton" customModule="CurrencyApplication" customModuleProvider="target">
-                                <rect key="frame" x="127" y="423" width="160" height="50"/>
+                                <rect key="frame" x="127" y="403" width="160" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="0Qz-BD-2Ne"/>
                                     <constraint firstAttribute="height" constant="50" id="Bwq-pF-tEm"/>
@@ -208,14 +217,17 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="xxp-Gf-kQQ" firstAttribute="top" secondItem="0dI-Zs-Cud" secondAttribute="bottom" constant="50" id="4jX-J4-x5K"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DtC-Hd-oL3" secondAttribute="trailing" constant="20" id="634-dh-6jH"/>
                             <constraint firstItem="xq9-B2-RJs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="6cu-2T-TUc"/>
                             <constraint firstItem="xq9-B2-RJs" firstAttribute="top" secondItem="fc3-ih-4p3" secondAttribute="bottom" constant="90" id="AYS-5a-zML"/>
                             <constraint firstItem="xxp-Gf-kQQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cys-wU-fAp"/>
                             <constraint firstItem="0dI-Zs-Cud" firstAttribute="leading" secondItem="xq9-B2-RJs" secondAttribute="leading" id="ILF-Sv-v2q"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fc3-ih-4p3" secondAttribute="trailing" constant="20" id="JMy-bK-xaZ"/>
                             <constraint firstItem="fc3-ih-4p3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="29" id="Lvv-v1-Nr7"/>
+                            <constraint firstItem="DtC-Hd-oL3" firstAttribute="top" secondItem="fc3-ih-4p3" secondAttribute="bottom" id="ZqX-yA-oKV"/>
                             <constraint firstItem="0dI-Zs-Cud" firstAttribute="trailing" secondItem="xq9-B2-RJs" secondAttribute="trailing" id="a6P-6N-lrD"/>
                             <constraint firstItem="0dI-Zs-Cud" firstAttribute="top" secondItem="xq9-B2-RJs" secondAttribute="bottom" constant="50" id="bp6-TF-TN8"/>
+                            <constraint firstItem="DtC-Hd-oL3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ibM-Pm-vs5"/>
                             <constraint firstItem="xq9-B2-RJs" firstAttribute="height" secondItem="0dI-Zs-Cud" secondAttribute="height" id="paz-X0-GQD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xq9-B2-RJs" secondAttribute="trailing" constant="20" id="rjw-Is-SFS"/>
                             <constraint firstItem="fc3-ih-4p3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="sIG-2T-CZ1"/>
@@ -223,6 +235,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="asOnDateLabel" destination="DtC-Hd-oL3" id="FQt-1L-Ov0"/>
                         <outlet property="convertedTextField" destination="gdH-Ud-dq3" id="VFh-9m-4pP"/>
                         <outlet property="currencyTextfield" destination="mEm-Wz-P8p" id="iQa-ys-RzM"/>
                         <outlet property="fromCurrencyButton" destination="9yG-6Y-cqa" id="x8R-Zb-IQM"/>

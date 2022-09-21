@@ -37,6 +37,7 @@ class HistoryCell: UITableViewCell {
     }
     
     func setupUI() {
+        dateTextfield.setBorder(color: .blue)
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(HistoryCell.dateTapped))
         tapGesture.numberOfTapsRequired = 1
         tapGesture.numberOfTouchesRequired = 1
