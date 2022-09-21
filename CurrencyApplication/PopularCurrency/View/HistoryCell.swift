@@ -49,7 +49,7 @@ class HistoryCell: UITableViewCell {
         pickerView.delegate = self
         pickerView.backgroundColor = UIColor.white
         pickerView.dataSource = self
-        let toolBar = UIToolbar()
+        let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 44))
         toolBar.barStyle = .default
         toolBar.isTranslucent = true
         toolBar.tintColor = UIColor.gray

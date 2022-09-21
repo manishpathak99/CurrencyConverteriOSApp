@@ -162,7 +162,7 @@ extension CurrencyViewController {
 
     // MARK: Dismiss Keyboard
     func dismissKeyboard(_ textField: UITextField) {
-        let toolBar = UIToolbar()
+        let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 44))
         toolBar.sizeToFit()
         let button = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneClick))
         toolBar.setItems([button], animated: true)
