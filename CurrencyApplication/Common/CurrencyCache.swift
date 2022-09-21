@@ -8,7 +8,7 @@
 
 import Foundation
 
-class CurrencyCache {
+final class CurrencyCache {
     static private(set) var shared = CurrencyCache()
     private init(){}
     private let selectedDateKey = "SelectedDate"

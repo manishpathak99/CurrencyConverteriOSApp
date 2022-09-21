@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class HistoryViewController: UIViewController {
+final class HistoryViewController: UIViewController {
     
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet weak var historyTableView: UITableView!{

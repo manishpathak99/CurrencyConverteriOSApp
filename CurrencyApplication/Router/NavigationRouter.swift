@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NavigationRouter {
+final class NavigationRouter {
     
     static func openCurrencyViewController() -> UIViewController? {
         let networkManager = NetworkManager()

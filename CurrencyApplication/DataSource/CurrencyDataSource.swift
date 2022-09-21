@@ -17,7 +17,7 @@ protocol CurrencyDataSourceProtocol: AnyObject {
     func getRowCount() -> Int?
 }
 
-class CurrencyDataSource : CurrencyDataSourceProtocol{
+final class CurrencyDataSource : CurrencyDataSourceProtocol{
     var base: String?
     var date: String?
     var rates: [RateModel]?

@@ -14,7 +14,7 @@ protocol CurrencyPickerViewControllerProtocol : AnyObject{
     func didSelectCurrencyFromList(rateModel : RateModel)
 }
 
-class CurrencyPickerViewController: UIViewController {
+final class CurrencyPickerViewController: UIViewController {
     // MARK: View Model
     fileprivate var viewModel : CurrencyPickerViewModel!
     var disposeBag = DisposeBag()

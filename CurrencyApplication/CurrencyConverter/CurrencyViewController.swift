@@ -15,7 +15,7 @@ enum ActionState {
     case toCurrencyClicked
 }
 
-class CurrencyViewController: UIViewController {
+final class CurrencyViewController: UIViewController {
     
     // MARK: - IBOutlet
     @IBOutlet private weak var fromCurrencyButton: CurrencyButton!
