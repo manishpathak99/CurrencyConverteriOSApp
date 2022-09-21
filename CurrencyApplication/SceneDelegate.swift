@@ -14,7 +14,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-        if let currencyViewController = NavigationRouter.openCurrencyViewController(){
+        if let currencyViewController = NavigationRouter.openCurrencyViewController() {
             let navViewController = UINavigationController(rootViewController: currencyViewController)
             window.rootViewController = navViewController
         }
@@ -22,4 +22,3 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window.makeKeyAndVisible()
     }
 }
-

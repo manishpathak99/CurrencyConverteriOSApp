@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol HistoryCellProtocol : AnyObject{
+protocol HistoryCellProtocol: AnyObject {
     func didSelectDate()
 }
 
@@ -18,24 +18,24 @@ class HistoryCell: UITableViewCell {
     @IBOutlet private weak var dateTextfield: UITextField!
     private let pickerView = UIPickerView()
     private var pickerDataSource = [String]()
-    
+
     // MARK: Delegate
-    weak var delegate : HistoryCellProtocol?
-    
+    weak var delegate: HistoryCellProtocol?
+
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
     }
 
-    func configure(baseCurrency : String, dateArray : [String]) {
+    func configure(baseCurrency: String, dateArray: [String]) {
         dateTextfield.inputView = pickerView
         baseCurrencyLabel.text =  baseCurrency
-        if dateTextfield.text?.count ?? 0 < 1{
+        if dateTextfield.text?.count ?? 0 < 1 {
             dateTextfield.text = dateArray.first
         }
         pickerDataSource = dateArray
     }
-    
+
     func setupUI() {
         dateTextfield.setBorder(color: .blue)
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(HistoryCell.dateTapped))
@@ -44,7 +44,7 @@ class HistoryCell: UITableViewCell {
         self.dateTextfield.addGestureRecognizer(tapGesture)
         self.dateTextfield.delegate = self
     }
-    
+
     @objc func dateTapped() {
         pickerView.delegate = self
         pickerView.backgroundColor = UIColor.white
@@ -54,7 +54,7 @@ class HistoryCell: UITableViewCell {
         toolBar.isTranslucent = true
         toolBar.tintColor = UIColor.gray
         toolBar.sizeToFit()
-        
+
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(HistoryCell.doneClick))
         let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         toolBar.setItems([spaceButton, doneButton], animated: false)
@@ -64,19 +64,19 @@ class HistoryCell: UITableViewCell {
         self.dateTextfield.reloadInputViews()
         self.dateTextfield.becomeFirstResponder()
     }
-    
+
     @objc func doneClick() {
         self.endEditing(true)
     }
-    
+
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
     }
 }
-extension HistoryCell : UITextFieldDelegate{}
+extension HistoryCell: UITextFieldDelegate {}
 
-extension HistoryCell : UIPickerViewDelegate, UIPickerViewDataSource{
+extension HistoryCell: UIPickerViewDelegate, UIPickerViewDataSource {
     // MARK: UIPickerView Delegation
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

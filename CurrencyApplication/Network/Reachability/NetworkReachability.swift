@@ -7,7 +7,7 @@
 //
 
 class NetworkReachability {
-    
+
     private static var instance = NetworkReachability()
     public static func shared() -> NetworkReachability {
         return NetworkReachability.instance
@@ -16,7 +16,7 @@ class NetworkReachability {
 }
 
 extension NetworkReachability: ReachabilityProtocol {
-    
+
     func isInternetAvailable() -> Bool {
         return Reachability.isConnectedToNetwork()
     }

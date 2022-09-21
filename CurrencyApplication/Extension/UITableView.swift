@@ -15,7 +15,7 @@ extension UITableView {
         let nib = T.nib()
         self.register(nib, forCellReuseIdentifier: T.tableCellReuseIdentifier())
     }
-    
+
     func dequeueReusableCell<T: UITableViewCell>(forIndexPath indexPath: IndexPath) -> T {
         guard let cell = self.dequeueReusableCell(withIdentifier: T.tableCellReuseIdentifier(), for: indexPath) as? T else {
             fatalError("Could not dequeue cell with identifier: \(T.tableCellReuseIdentifier())")
@@ -24,7 +24,7 @@ extension UITableView {
     }
 }
 
-extension UIView{
+extension UIView {
     class func nib() -> UINib {
         return UINib(nibName: className, bundle: nil)
     }

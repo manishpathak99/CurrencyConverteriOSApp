@@ -17,42 +17,42 @@ final class CurrencyViewModel: BaseViewModel {
     var reloadData = BehaviorRelay<Bool>(value: false)
     var dataSource: CurrencyDataSourceProtocol
     var rateModelArray = [RateModel]()
-    
+
     // MARK: View Model initialisation with parameters
     init?(networkManager: NetworkManagerProtocol,
-          dataSource : CurrencyDataSourceProtocol,
+          dataSource: CurrencyDataSourceProtocol,
           parseManager: ParseManagerProtocol) {
         self.networkManager = networkManager
         self.dataSource = dataSource
         self.parseManager = parseManager
     }
-    
+
     func getCurrencyList() {
         self.fetchCurrencies()
     }
-    
-    func getLabelData() -> [String]{
+
+    func getLabelData() -> [String] {
          var labels  = [String]()
          labels.append(todayDate)
          labels.append(baseCurrency)
          return labels
      }
-    
-    private var todayDate : String {
+
+    private var todayDate: String {
         let today = Date()
         let formatter1 = DateFormatter()
         formatter1.dateStyle = .short
         return "(Rates as on date \(dataSource.date ?? formatter1.string(from: today)))"
     }
-    
-    private var baseCurrency : String{
+
+    private var baseCurrency: String {
         return "\(&&"Base_Currency") \(dataSource.base ?? "EUR")"
     }
 }
 
-extension CurrencyViewModel{
+extension CurrencyViewModel {
     // MARK: Fetch currency list
-    private func fetchCurrencies(){
+    private func fetchCurrencies() {
         shouldShowLoader.accept(true)
         guard let networkManager = networkManager else {
             self.showErrorMessage.accept("Missing Network Manager")
@@ -66,14 +66,14 @@ extension CurrencyViewModel{
                     self.showErrorMessage.accept(error)
                     return
                 }
-                if let responseData = responseData{
+                if let responseData = responseData {
                     self.parseResponsetoDataSource(responseData: responseData)
                 }
             }
         }
     }
-    
-    private func parseResponsetoDataSource(responseData: Data){
+
+    private func parseResponsetoDataSource(responseData: Data) {
         guard let parseManager = self.parseManager else {
             self.showErrorMessage.accept("Missing Parse Manager")
             return
@@ -84,7 +84,7 @@ extension CurrencyViewModel{
                 self.showErrorMessage.accept(error)
                 return
             }
-            if let dataSourceVal = dataSource{
+            if let dataSourceVal = dataSource {
                 self.dataSource = dataSourceVal
                 self.reloadData.accept(true)
             }
@@ -93,17 +93,17 @@ extension CurrencyViewModel{
 }
 
 extension CurrencyViewModel {
-    
+
     // MARK: Get Converted Value from source to target currency
-    func getConvertedAmountToStr(from : String, to: String, numberToConvert: Double) -> Double? {
-        if let inputToEURRate = getCurrencyDefaultValue(fromCurrency: from), let targetToEURRate = getCurrencyDefaultValue(fromCurrency: to){
+    func getConvertedAmountToStr(from: String, to: String, numberToConvert: Double) -> Double? {
+        if let inputToEURRate = getCurrencyDefaultValue(fromCurrency: from), let targetToEURRate = getCurrencyDefaultValue(fromCurrency: to) {
             let total = numberToConvert / inputToEURRate * targetToEURRate
             return total.rounded(toPlaces: 4)
         }
         return nil
     }
-    
-    private func getCurrencyDefaultValue(fromCurrency : String) -> Double? {
+
+    private func getCurrencyDefaultValue(fromCurrency: String) -> Double? {
         if let rates = self.dataSource.rates {
             for rate in rates {
                 if rate.currency == fromCurrency {
@@ -113,12 +113,12 @@ extension CurrencyViewModel {
         }
         return nil
     }
-    
+
     func isBothCurrencySelected() -> Bool {
         return rateModelArray.count == 2
     }
-    
-    func swapCurrency(){
+
+    func swapCurrency() {
         if isBothCurrencySelected() {
             let rate = rateModelArray[0]
             rateModelArray[0] = rateModelArray[1]

@@ -12,8 +12,8 @@ extension UIViewController {
     static var storyboardID: String {
         return className
     }
-    
-    func showAlert(title : String, message : String){
+
+    func showAlert(title: String, message: String) {
         let alertController = UIAlertController(title: title,
                                                 message: message,
                                                 preferredStyle: UIAlertController.Style.alert)

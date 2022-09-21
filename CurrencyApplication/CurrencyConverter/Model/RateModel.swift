@@ -6,7 +6,7 @@
 //  Copyright © 2022 Manish Pathak. All rights reserved.
 //
 
-struct RateModel : BaseModel  {
+struct RateModel: BaseModel {
     let currency: String
     let value: Double
 }

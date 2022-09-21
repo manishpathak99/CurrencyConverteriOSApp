@@ -10,11 +10,11 @@ import Foundation
 import Foundation
 
 class DataHandler {
-    
+
     func responseHandling(_ data: Data?,
                           _ response: URLResponse?,
-                          completion : NetworkManagerCompletion){
-        
+                          completion: NetworkManagerCompletion) {
+
         if let response = response as? HTTPURLResponse {
             let result = self.handleNetworkResponse(response)
             switch result {
@@ -29,9 +29,9 @@ class DataHandler {
             }
         }
     }
-    
+
     // Error Codes
-    fileprivate func handleNetworkResponse(_ response: HTTPURLResponse) -> Result<String>{
+    fileprivate func handleNetworkResponse(_ response: HTTPURLResponse) -> Result<String> {
         switch response.statusCode {
         case 200...299: return .success
         case 404 : return .failure(NetworkResponse.noresource.rawValue)
@@ -41,5 +41,5 @@ class DataHandler {
         default: return .failure(NetworkResponse.failed.rawValue)
         }
     }
-    
+
 }

@@ -16,26 +16,26 @@ enum ActionState {
 }
 
 final class CurrencyViewController: UIViewController {
-    
+
     // MARK: - IBOutlet
     @IBOutlet private weak var fromCurrencyButton: CurrencyButton!
     @IBOutlet private weak var toCurrencyButton: CurrencyButton!
     @IBOutlet private weak var asOnDateLabel: UILabel!
     @IBOutlet private weak var currencyTextfield: UITextField!
     @IBOutlet private weak var convertedTextField: UITextField! {
-        didSet{
+        didSet {
             convertedTextField.isUserInteractionEnabled = false
         }
     }
     fileprivate let loaderView = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)
-    
+
     // MARK: View Model
-    fileprivate var viewModel : CurrencyViewModel!
+    fileprivate var viewModel: CurrencyViewModel!
     fileprivate var disposeBag = DisposeBag()
-    fileprivate var clickedState : ActionState = .fromCurrencyClicked
-    
+    fileprivate var clickedState: ActionState = .fromCurrencyClicked
+
     private var numberToConvert = BehaviorRelay<Double>(value: 1.0)
-    
+
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,42 +43,42 @@ final class CurrencyViewController: UIViewController {
         setupUI()
         bindActions()
     }
-    
-    private func setupUI(){
+
+    private func setupUI() {
         setupLoaderView()
         currencyTextfield.keyboardType = .decimalPad
         currencyTextfield.setBorder(color: .blue)
         convertedTextField.setBorder(color: .blue)
         dismissKeyboard(currencyTextfield)
     }
-    
+
     private func setupLoaderView() {
         loaderView.center = self.view.center
         self.view.addSubview(loaderView)
     }
-    
-    func configure(viewModel : CurrencyViewModel){
+
+    func configure(viewModel: CurrencyViewModel) {
         self.viewModel = viewModel
     }
-    
+
     // MARK: - IBOutlet Action
     @IBAction func btnFromCurrencyClicked(_ sender: Any) {
         // open the list of currencies for selection
         navigateToCurrencyPicker(clickedState: .fromCurrencyClicked)
     }
-    
+
     @IBAction func btnToCurrencyClicked(_ sender: Any) {
         // open the list of currencies for selection
         navigateToCurrencyPicker(clickedState: .toCurrencyClicked)
     }
-    
+
     @IBAction func swapCurrencyClicked(_ sender: Any) {
         // swap the currency
         self.currencyTextfield.resignFirstResponder()
         self.viewModel.swapCurrency()
         self.updateCurrencies()
     }
-    
+
     @IBAction func detailClicked(_ sender: Any) {
         // Navigate to Currency History
         if let viewModel = HistoryViewModel(networkManager: viewModel.networkManager,
@@ -90,7 +90,7 @@ final class CurrencyViewController: UIViewController {
 }
 
 extension CurrencyViewController {
-    
+
     private func bindActions() {
         viewModel.shouldShowLoader.asObservable().subscribe { shouldShow in
             if let shouldShow = shouldShow.element {
@@ -104,7 +104,7 @@ extension CurrencyViewController {
                 }
             }
         }.disposed(by: disposeBag)
-        
+
         viewModel.showErrorMessage.asObservable().subscribe(onNext: { message in
             if let errorMessage = message {
                 DispatchQueue.main.async {
@@ -112,22 +112,22 @@ extension CurrencyViewController {
                 }
             }
         }).disposed(by: disposeBag)
-        
+
         viewModel.reloadData.asObservable().subscribe { shouldReload in
             if let shouldReload = shouldReload.element {
                 DispatchQueue.main.async {
-                    if shouldReload{
+                    if shouldReload {
                         self.updateLabels()
                     }
                 }
             }
         }.disposed(by: disposeBag)
-        
+
         numberToConvert.asObservable().subscribe { [unowned self] value in
             self.setConvertedValue(number: self.numberToConvert.value)
-            
+
         }.disposed(by: disposeBag)
-        
+
         currencyTextfield.rx.controlEvent([.editingDidBegin, .editingChanged, .editingDidEnd])
             .asObservable()
             .subscribe(onNext: { [unowned self] in
@@ -135,20 +135,20 @@ extension CurrencyViewController {
             })
             .disposed(by: disposeBag)
     }
-    
-    private func setConvertedValue(number: Double){
+
+    private func setConvertedValue(number: Double) {
         if let fromVal = fromCurrencyButton.titleLabel?.text,
             let toVal = toCurrencyButton.titleLabel?.text {
-            if  let convertedAmount = viewModel.getConvertedAmountToStr(from: fromVal, to: toVal, numberToConvert: number){
+            if  let convertedAmount = viewModel.getConvertedAmountToStr(from: fromVal, to: toVal, numberToConvert: number) {
                 convertedTextField.text = "\(convertedAmount)"
             }
         }
     }
-    
+
     private func navigateToCurrencyPicker(clickedState: ActionState) {
         self.view.endEditing(true)
         self.clickedState = clickedState
-        if let viewModel = CurrencyPickerViewModel(dataSource: viewModel.dataSource){
+        if let viewModel = CurrencyPickerViewModel(dataSource: viewModel.dataSource) {
             NavigationRouter.openCurrencyPickerViewController(fromViewController: self, viewModel: viewModel)
         }
     }
@@ -158,9 +158,8 @@ extension CurrencyViewController {
     }
 }
 
-
 extension CurrencyViewController {
-    
+
     // MARK: Dismiss Keyboard
     func dismissKeyboard(_ textField: UITextField) {
         let toolBar = UIToolbar()
@@ -170,15 +169,15 @@ extension CurrencyViewController {
         toolBar.isUserInteractionEnabled = true
         textField.inputAccessoryView = toolBar
     }
-    
+
     @objc func doneClick() {
         self.view.endEditing(true)
     }
 }
 
-extension CurrencyViewController : UITextFieldDelegate{ }
+extension CurrencyViewController: UITextFieldDelegate { }
 
-extension CurrencyViewController : CurrencyPickerViewControllerProtocol{
+extension CurrencyViewController: CurrencyPickerViewControllerProtocol {
     func didSelectCurrencyFromList(rateModel: RateModel) {
         if self.clickedState == .fromCurrencyClicked {
             self.viewModel.rateModelArray.insert(rateModel, at: 0)
@@ -187,7 +186,7 @@ extension CurrencyViewController : CurrencyPickerViewControllerProtocol{
         }
         self.updateCurrencies()
     }
-    
+
     private func updateCurrencies() {
         if !self.viewModel.rateModelArray.isEmpty {
             let fromCurrency = self.viewModel.rateModelArray.first

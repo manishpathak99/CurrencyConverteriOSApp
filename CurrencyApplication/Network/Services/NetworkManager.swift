@@ -11,27 +11,27 @@ import Foundation
 public typealias NetworkManagerCompletion = (_ data: Data?, _ error: String?) -> Swift.Void
 
 protocol NetworkManagerProtocol {
-    func getCurrenciesData(uri : CurrencyApi, completion: @escaping NetworkManagerCompletion)
+    func getCurrenciesData(uri: CurrencyApi, completion: @escaping NetworkManagerCompletion)
 }
 
-enum Result<String>{
+enum Result<String> {
     case success
     case failure(String)
 }
 
-struct NetworkManager : NetworkManagerProtocol{
+struct NetworkManager: NetworkManagerProtocol {
     let router = Router<CurrencyApi>()
     let dataHandler = DataHandler()
-    
-    func getCurrenciesData(uri : CurrencyApi, completion: @escaping NetworkManagerCompletion){
+
+    func getCurrenciesData(uri: CurrencyApi, completion: @escaping NetworkManagerCompletion) {
         router.request(uri) { data, response, error in
             if error != nil {
                 completion(nil, error?.localizedDescription)
             }
             self.dataHandler.responseHandling(data, response) { responseData, error in
-                if error != nil{
+                if error != nil {
                     completion(nil, NetworkResponse.noData.rawValue)
-                }else{
+                } else {
                     completion(responseData, nil)
                 }
             }

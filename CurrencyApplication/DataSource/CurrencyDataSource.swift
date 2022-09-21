@@ -17,16 +17,16 @@ protocol CurrencyDataSourceProtocol: AnyObject {
     func getRowCount() -> Int?
 }
 
-final class CurrencyDataSource : CurrencyDataSourceProtocol{
+final class CurrencyDataSource: CurrencyDataSourceProtocol {
     var base: String?
     var date: String?
     var rates: [RateModel]?
     var selectedRates: [RateModel]?
-    
-    func getSectionCount() -> Int{
+
+    func getSectionCount() -> Int {
         return 1
     }
-    func getRowCount() -> Int?{
+    func getRowCount() -> Int? {
         return rates?.count
     }
 }

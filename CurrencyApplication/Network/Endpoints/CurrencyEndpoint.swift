@@ -14,7 +14,7 @@ public enum CurrencyApi {
 }
 
 extension CurrencyApi: EndPointType {
-    
+
     var path: String {
         switch self {
         case .getCurrenciessUri:
@@ -23,28 +23,28 @@ extension CurrencyApi: EndPointType {
             return CurrencyCache.shared.getSelectDate()
         }
     }
-    
+
     var baseURLWithParameter: URL {
        return baseURL.append(parameters) ?? baseURL
     }
-    
+
     var httpMethod: HTTPMethod {
         return .get
     }
-    
+
     var task: HTTPTask {
         return .request
     }
-    
+
     var headers: HTTPHeaders? {
         return nil
     }
-    
+
     var accessKey: String? {
         guard let accessKey = bundleForKey("ACCESS_KEY") else { return "" }
         return accessKey
     }
-    
+
     var parameters: [URLQueryItem] {
         switch self {
         case .getCurrenciessUri:
@@ -52,7 +52,7 @@ extension CurrencyApi: EndPointType {
                 return []
             }
             return [URLQueryItem(name: "access_key", value: key)]
-            
+
         case .historyUri:
             guard let key = accessKey else {
                 assertionFailure("Missing accessKey")

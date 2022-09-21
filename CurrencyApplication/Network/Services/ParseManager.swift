@@ -10,13 +10,12 @@ import Foundation
 
 protocol ParseManagerProtocol {
     func parseResponseToDataSource(responseData: Data,
-                                   completion : @escaping (_ dataSource: CurrencyDataSourceProtocol?,_ error: String?) -> Swift.Void)
+                                   completion : @escaping (_ dataSource: CurrencyDataSourceProtocol?, _ error: String?) -> Swift.Void)
 }
 
-
-class ParseManager : ParseManagerProtocol {
+class ParseManager: ParseManagerProtocol {
     func parseResponseToDataSource(responseData: Data,
-                                   completion : @escaping (_ dataSource: CurrencyDataSourceProtocol?,_ error: String?) -> Swift.Void) {
+                                   completion : @escaping (_ dataSource: CurrencyDataSourceProtocol?, _ error: String?) -> Swift.Void) {
         var ratesArray: [RateModel] = []
         do {
             let apiResponse = try JSONDecoder().decode(ExchangeRatesModel.self, from: responseData)

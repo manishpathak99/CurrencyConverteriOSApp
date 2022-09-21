@@ -9,7 +9,7 @@
 import Foundation
 
 class NetworkLogger {
-    
+
     static func log(request: URLRequest) {
         print("\n ***************** Request Start ******************** \n")
         defer { print("\n ***************** Request END ******************** \n") }
@@ -19,7 +19,7 @@ class NetworkLogger {
         let path = "\(urlComponents?.path ?? "")"
         let query = "\(urlComponents?.query ?? "")"
         let host = "\(urlComponents?.host ?? "")"
-        
+
         var logOutput = """
         \(urlAsString) \n\n
         \(method) \(path)?\(query) \n
