@@ -13,7 +13,7 @@ steps:
 - task: CocoaPods@0
   timeoutInMinutes: 5
   inputs:
-    workingDirectory: 'CurrencyConverteriOSApp'
+  #  workingDirectory: 'CurrencyConverteriOSApp'
     forceRepoUpdate: true
 - task: Xcode@5
   inputs:
